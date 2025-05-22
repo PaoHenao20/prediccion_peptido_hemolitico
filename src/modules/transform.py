@@ -37,6 +37,26 @@ def concat_csv_sin_duplicados(folder_path: str,
     return df_sin_dup
 
 
+def clean_df(df: pd.DataFrame, output_csv: str = None) -> pd.DataFrame:
+    # 1) Copiar para no mutar el original
+    df_clean = df.copy()
+
+    # 2) Eliminar duplicados
+    df_clean = df_clean.drop_duplicates(ignore_index=True)
+
+    # 3) Eliminar filas donde 'SEQUENCE' sea NaN o cadena vacía
+    df_clean = df_clean[df_clean['SEQUENCE'].notna()]          # no NaN
+    df_clean = df_clean[df_clean['SEQUENCE'].astype(str) != '']  # no vacías
+    df_clean = df_clean.reset_index(drop=True)
+
+    # 4) Guardar a CSV si se especifica
+    if output_csv:
+        df_clean.to_csv(output_csv, index=False)
+
+    return df_clean
+
+
+
 
 def separar_con_guiones(cadena: str) -> str:
     if pd.notnull(cadena):

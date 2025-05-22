@@ -1,1 +1,1 @@
-# preditos_peptido_hemolitico
+# prediccion_peptido_hemolitico

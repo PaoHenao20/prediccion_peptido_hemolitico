@@ -1,1 +1,3 @@
 # prediccion_peptido_hemolitico
+
+conda activate prediccion_hemolitico

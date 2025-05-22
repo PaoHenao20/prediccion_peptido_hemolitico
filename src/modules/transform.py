@@ -44,12 +44,15 @@ def clean_df(df: pd.DataFrame, output_csv: str = None) -> pd.DataFrame:
     # 2) Eliminar duplicados
     df_clean = df_clean.drop_duplicates(ignore_index=True)
 
-    # 3) Eliminar filas donde 'SEQUENCE' sea NaN o cadena vacía
-    df_clean = df_clean[df_clean['SEQUENCE'].notna()]          # no NaN
-    df_clean = df_clean[df_clean['SEQUENCE'].astype(str) != '']  # no vacías
+    # 3) Quitar espacios al inicio/final en 'SEQUENCE'
+    df_clean['SEQUENCE'] = df_clean['SEQUENCE'].astype(str).str.strip()
+
+    # 4) Eliminar filas donde 'SEQUENCE' sea NaN o esté vacío
+    df_clean = df_clean[df_clean['SEQUENCE'].notna()]           # no NaN
+    df_clean = df_clean[df_clean['SEQUENCE'] != '']             # no vacías
     df_clean = df_clean.reset_index(drop=True)
 
-    # 4) Guardar a CSV si se especifica
+    # 5) Guardar a CSV si se especifica
     if output_csv:
         df_clean.to_csv(output_csv, index=False)
 
@@ -60,8 +63,7 @@ def clean_df(df: pd.DataFrame, output_csv: str = None) -> pd.DataFrame:
 
 def separar_con_guiones(cadena: str) -> str:
     if pd.notnull(cadena):
-        cleaned = cadena.replace('-', '')
-        return '-'.join(cleaned)
+        return '-'.join(cadena)
     return cadena
 
 
@@ -69,6 +71,7 @@ def separar_con_guiones(cadena: str) -> str:
 def get_smiles(peptido: str) -> str:
     # 1) formatear la cadena
     seq_str = separar_con_guiones(peptido)
+    print(seq_str)
 
     # 2) crear objeto Sequence y corregir átomos
     seq_obj = Sequence(seq_str)
@@ -83,3 +86,21 @@ def get_smiles(peptido: str) -> str:
 
     return smiles
     
+def annotate_and_save(
+    df: pd.DataFrame,
+    seq_col: str = 'SEQUENCE',
+    smiles_col: str = 'SMILES',
+    output_csv: str = None
+) -> pd.DataFrame:
+    # 1) Guarda la lista de columnas originales
+    original_cols = list(df.columns)
+    # 2) Haz una copia para no mutar el DataFrame pasado
+    df_out = df.copy()
+    # 3) Añade la columna de SMILES
+    df_out[smiles_col] = df_out[seq_col].apply(get_smiles)
+    # 4) Reordena para que queden primero las originales y luego SMILES
+    df_out = df_out[original_cols + [smiles_col]]
+    # 5) Guarda si pidieron ruta
+    if output_csv:
+        df_out.to_csv(output_csv, index=False)
+    return df_out

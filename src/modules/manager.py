@@ -1,5 +1,5 @@
 from extract import download_file_from_url
-from transform import clean_df, concat_csv_sin_duplicados, get_smiles
+from transform import annotate_and_save, clean_df, concat_csv_sin_duplicados, get_smiles
 
 # HemoPI2 data - information link: https://webs.iiitd.edu.in/raghava/hemopi2/download.html
 # ToxinPred3 - information link:  https://webs.iiitd.edu.in/raghava/toxinpred3/download.php
@@ -35,7 +35,18 @@ df_limpio = clean_df(
     output_csv="data/processed/all_data_clean.csv"
 )
 
-print(df_limpio)
+print(df_limpio.info())
+
+
+df_result = annotate_and_save(
+    df_limpio,
+    seq_col="SEQUENCE",
+    smiles_col="SMILES",
+    output_csv="data/processed/all_data_with_smiles.csv"
+)
+print(df_result.head())
+
+
 
 # seq_input = "PYK-K-W-P-R-P-D-A-P-I-P-P"
 # smiles = get_smiles(seq_input)

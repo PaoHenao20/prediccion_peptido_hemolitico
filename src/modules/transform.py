@@ -8,6 +8,24 @@ from pyPept.molecule import Molecule
 
 # RDKit imports
 from rdkit import Chem
+import pandas as pd
+from mordred import Calculator, descriptors
+import numpy as np
+import warnings
+
+# Parche para compatibilidad con versiones antiguas de librerías
+if not hasattr(np, 'float'):
+    np.float = float
+if not hasattr(np, 'int'):
+    np.int = int
+if not hasattr(np, 'bool'):
+    np.bool = bool
+if not hasattr(np, 'object'):
+    np.object = object
+if not hasattr(np, 'long'):
+    np.long = int  # Python 3 ya no tiene 'long'
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 def concat_csv_sin_duplicados(folder_path: str,
@@ -104,3 +122,28 @@ def annotate_and_save(
     if output_csv:
         df_out.to_csv(output_csv, index=False)
     return df_out
+
+
+def compute_mordred_descriptors(df: pd.DataFrame,
+                                smiles_col: str = 'SMILES') -> pd.DataFrame:
+    """
+    Para cada SMILES en df[smiles_col], calcula todos los descriptores de Mordred
+    (ignore_3D=True) y devuelve un nuevo DataFrame con los descriptores.
+    """
+    # 1) Instanciar el calculador de Mordred
+    calc = Calculator(descriptors, ignore_3D=True)
+
+    # 2) Convertir cada SMILES a Mol
+    mols = df[smiles_col].map(lambda s: Chem.MolFromSmiles(s))
+
+    # 3) Ejecutar Mordred en lote y obtener DataFrame de descriptores
+    #    calc.pandas acepta una lista/serie de RDKit Mol
+    df_desc = calc.pandas(mols)
+
+    # 4) Opcional: limpiar columnas con todos NaN o infinito
+    df_desc = df_desc.dropna(axis=1, how='all')
+
+    # 5) Resetear índices para alineación
+    df_desc.index = df.index
+
+    return df_desc

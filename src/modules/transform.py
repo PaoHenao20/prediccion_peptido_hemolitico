@@ -1,3 +1,4 @@
+from matplotlib import pyplot as plt
 import pandas as pd
 import glob
 import os
@@ -19,6 +20,9 @@ import numpy as np
 import warnings
 from sklearn.feature_extraction.text import CountVectorizer
 from typing import List
+import seaborn as sns
+
+
 
 # Parche para compatibilidad con versiones antiguas de librerías
 if not hasattr(np, 'float'):
@@ -54,7 +58,7 @@ def concat_csv_sin_duplicados(folder_path: str,
     # 3) Concatenar y eliminar duplicados
     df_concat = pd.concat(dfs, ignore_index=True)
     df_sin_dup = df_concat.drop_duplicates()
-    df_sin_dup = df_sin_dup.head(50)
+    # df_sin_dup = df_sin_dup.head(50)
 
     # 4) Guardar
     if output_path:
@@ -221,3 +225,34 @@ def compute_sequence_features(
         result_df = pd.concat([result_df.reset_index(drop=True), kmer_df], axis=1)
 
     return result_df
+
+def plot_top_correlations(df, target, method, filepath):
+    if target not in df.columns:
+        print(f'🔸 La variable objetivo "{target}" no está en el DataFrame.')
+        return
+    
+    # Filtrar solo columnas numéricas
+    numeric_df = df.select_dtypes(include='number')
+    
+    # Calcular matriz de correlación
+    corr_matrix = numeric_df.corr(method=method)
+    
+    # Extraer correlación con la variable objetivo
+    correlations = corr_matrix[target].drop(target).dropna()
+    
+    # Seleccionar top 10 por valor absoluto
+    top10 = correlations.reindex(correlations.abs().sort_values(ascending=False).head(10).index)
+    
+    # Graficar
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x=top10.values, y=top10.index, palette='coolwarm')
+    plt.title(f'Top 10 {method.capitalize()} correlations with {target}')
+    plt.xlabel(f'{method.capitalize()} Correlation Coefficient')
+    plt.tight_layout()
+    
+    # Guardar gráfico
+    # filename = f'{method.lower()}_top10_{target.lower()}.png'
+    # filepath = os.path.join(output_dir, filename)
+    plt.savefig(filepath)
+    plt.close()
+    print(f'✅ Gráfico guardado: {filepath}')

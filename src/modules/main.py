@@ -1,19 +1,53 @@
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_filter: -all
+#     formats: ipynb,py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.17.2
+# ---
+
+# %%
+import numpy as np
 import pandas as pd
 from extract import download_file_from_url
-from transform import annotate_and_save, clean_df, compute_mordred_descriptors, concat_csv_sin_duplicados, get_smiles, df_to_fasta, run_cd_hit, fasta_to_df, compute_sequence_features
+from transform import annotate_and_save, clean_df, compute_mordred_descriptors, concat_csv_sin_duplicados, get_smiles, df_to_fasta, run_cd_hit, fasta_to_df, compute_sequence_features, plot_top_correlations
+import os
+import warnings
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+
+warnings.filterwarnings("ignore", message="Failed to patch pandas")
+
+# Asegúrate de que las carpetas existen
+os.makedirs("data/curated", exist_ok=True)
+os.makedirs("data/raw", exist_ok=True) 
+os.makedirs("data/curated/cd_hit", exist_ok=True)
+os.makedirs("data/curated/cd_hit_csv", exist_ok=True)
+os.makedirs("data/curated/descriptors", exist_ok=True)
+os.makedirs("data/curated/descriptors_and_frequencies", exist_ok=True)
+os.makedirs("data/curated/smile_data", exist_ok=True)
+os.makedirs("data/result/figures", exist_ok=True)
+
+# %% [markdown]
 # HemoPI2 data - information link: https://webs.iiitd.edu.in/raghava/hemopi2/download.html
 # ToxinPred3 - information link:  https://webs.iiitd.edu.in/raghava/toxinpred3/download.php
 
+# %%
 MAIN_FOLDER = "data/raw_test"
 CURATED_FOLDER = "data/curated"
 
+# %%
 url_dict =  {
     "HemoPI_train": "https://webs.iiitd.edu.in/raghava/hemopi2/download/cross_val_dataset.csv",
     "HemoPI_test": "https://webs.iiitd.edu.in/raghava/hemopi2/download/independent_dataset.csv",
+    }
 
-}
-
+# %%
 if __name__ == "__main__":
     for file_name, url in url_dict.items():
         download_file_from_url(url, f"{MAIN_FOLDER}/{file_name}.csv")
@@ -88,5 +122,88 @@ if __name__ == "__main__":
             final_csv = f"{CURATED_FOLDER}/descriptors_and_frequencies/peptides_{int(identity * 100)}.csv"
             merge_df.to_csv(final_csv, index=False)
             print(f"✅ saved {final_csv}")
+    
+    
+    df_without_cd_hit = df_limpio.merge(df_100, how='left' , on='SEQUENCE' )
+    path = f"{CURATED_FOLDER}/descriptors_and_frequencies/peptides_without_cd_hit.csv"
+    df_without_cd_hit.to_csv(path, index=False)
+    print(f"✅ saved {path}")
 
-        
+# %%
+df_without_cd_hit_mod = df_without_cd_hit.rename(columns={"μM": "HC50"})
+
+df_without_cd_hit_mod.to_csv(path, index=False)
+print(f"✅ saved {path}")
+
+# %%
+"""1. Remove low-variance and missing-value variables:
+From the full dataset without CD-HIT filtering, drop all variables with missing values.
+Additionally, remove variables (descriptors, dimer, and trimer frequencies) with a standard deviation less than 0.05, as they likely contain values close to zero and contribute little to model performance.
+This filtering step is independent of class labels."""
+# %%
+# Quitar columnas con valores faltantes
+
+df_without_cd_hit_mod = df_without_cd_hit_mod.dropna(how='any')
+df_clean = df_without_cd_hit_mod.dropna(axis=1)
+
+# nan_counts = df_without_cd_hit_mod.isna().sum()
+# nan_cols = nan_counts[nan_counts > 0]
+# print(f"Columnas con NaNs: {len(nan_cols)}")
+# print(nan_cols.sort_values(ascending=False).head(10)) 
+
+# Separar variable objetivo
+target_cols = ['label', 'HC50']
+features = df_clean.drop(columns=target_cols, errors='ignore')
+
+# Filtrar solo columnas numéricas
+numeric_features = features.select_dtypes(include=[np.number])
+
+# Quitar columnas con desviación estándar < 0.05
+low_var_cols = numeric_features.std()[numeric_features.std() < 0.05].index
+features_filtered = numeric_features.drop(columns=low_var_cols)
+
+# Dataset final con columnas útiles + target
+df_filtered = pd.concat([features_filtered, df_clean[target_cols]], axis=1)
+
+print(df_filtered)
+# %%
+# Preparar los datos para visualización
+features_only = df_filtered.drop(columns=['label', 'HC50'], errors='ignore')
+features_only['label'] = df_filtered['label']
+
+# Agrupar las columnas en grupos de 50
+cols = features_only.drop(columns='label').columns
+group_size = 50
+column_groups = [cols[i:i+group_size] for i in range(0, len(cols), group_size)]
+
+output_dir = os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'result', 'figures'))
+os.makedirs(output_dir, exist_ok=True)
+
+
+
+# Crear los boxplots
+for i, group in enumerate(column_groups, start=1):
+    df_plot = pd.melt(features_only, id_vars='label', value_vars=group,
+                      var_name='feature', value_name='value')
+    
+    plt.figure(figsize=(24, 10))
+    sns.boxplot(data=df_plot, x='feature', y='value', hue='label')
+    plt.title(f'Boxplots por clase – Variables {((i-1)*group_size)+1} a {((i-1)*group_size)+len(group)}')
+    plt.xticks(rotation=90)
+    plt.legend(title='Clase', labels=['No Hemolítico (0)', 'Hemolítico (1)'])
+    plt.tight_layout()
+    filepath = os.path.join(output_dir, f'boxplot_group_{i}.png')
+    plt.savefig(filepath)
+    plt.close()
+
+# %%
+target_variables = ['label', 'HC50']
+
+# Crear directorio para guardar las figuras
+output_dir = os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'result', 'correlation'))
+os.makedirs(output_dir, exist_ok=True)
+
+for method in ['pearson', 'spearman']:
+    for target in target_variables:
+        plot_top_correlations(df_filtered, target, method, output_dir)
+# %%

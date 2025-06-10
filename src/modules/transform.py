@@ -1,6 +1,11 @@
 import pandas as pd
 import glob
 import os
+from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+import subprocess
+
 
 # PyPept imports
 from pyPept.sequence import Sequence, correct_pdb_atoms
@@ -12,6 +17,8 @@ import pandas as pd
 from mordred import Calculator, descriptors
 import numpy as np
 import warnings
+from sklearn.feature_extraction.text import CountVectorizer
+from typing import List
 
 # Parche para compatibilidad con versiones antiguas de librerías
 if not hasattr(np, 'float'):
@@ -47,6 +54,7 @@ def concat_csv_sin_duplicados(folder_path: str,
     # 3) Concatenar y eliminar duplicados
     df_concat = pd.concat(dfs, ignore_index=True)
     df_sin_dup = df_concat.drop_duplicates()
+    df_sin_dup = df_sin_dup.head(50)
 
     # 4) Guardar
     if output_path:
@@ -76,14 +84,46 @@ def clean_df(df: pd.DataFrame, output_csv: str = None) -> pd.DataFrame:
 
     return df_clean
 
+def df_to_fasta(df, seq_col='sequence', output='peptides.fasta'):
+    records = [
+        SeqRecord(Seq(seq), id=f"peptide_{i+1}", description="")
+        for i, seq in enumerate(df[seq_col])
+    ]
+    SeqIO.write(records, output, "fasta")
 
+def run_cd_hit(input_fasta, output_prefix, identity):
+    output_file = f"{output_prefix}_{int(identity * 100)}.fasta"
+    cmd = [
+        "cd-hit",
+        "-i", input_fasta,
+        "-o", output_file,
+        "-c", str(identity)
+    ]
+    
+    try:
+        subprocess.run(cmd, check=True)
+        print(f"CD-HIT completado para identidad {identity*100:.0f}%. Resultado: {output_file}")
+    except subprocess.CalledProcessError as e:
+        print(f"Error ejecutando CD-HIT con identidad {identity}: {e}")
+
+def fasta_to_df(fasta_path: str, output_csv: str = None) -> pd.DataFrame:
+    """Carga un archivo FASTA como DataFrame con una columna SEQUENCE"""
+    from Bio import SeqIO
+    sequences = []
+    for record in SeqIO.parse(fasta_path, "fasta"):
+        sequences.append(str(record.seq))
+    
+    df_result = pd.DataFrame({"SEQUENCE": sequences})
+
+    if output_csv:
+        df_result.to_csv(output_csv, index=False)
+    return df_result
 
 
 def separar_con_guiones(cadena: str) -> str:
     if pd.notnull(cadena):
         return '-'.join(cadena)
     return cadena
-
 
 
 def get_smiles(peptido: str) -> str:
@@ -147,3 +187,37 @@ def compute_mordred_descriptors(df: pd.DataFrame,
     df_desc.index = df.index
 
     return df_desc
+
+
+def normalize_counts(X):
+    """Normaliza las filas de una matriz para obtener frecuencias relativas."""
+    row_sums = X.sum(axis=1)
+    X_normalized = X.astype(float)
+    for i in range(X.shape[0]):
+        if row_sums[i, 0] != 0:
+            X_normalized[i] /= row_sums[i, 0]
+    return X_normalized
+
+def compute_sequence_features(
+    df: pd.DataFrame,
+    seq_column: str = 'sequence',
+    ks: List[int] = [1, 2, 3]
+) -> pd.DataFrame:
+    """
+    Calcula frecuencias de aminoácidos, dipeptidos y tripeptidos para cada secuencia.
+    Retorna un DataFrame con una fila por secuencia y columnas por k-mer.
+    """
+    result_df = df[[seq_column]].copy()
+
+    for k in ks:
+        vectorizer = CountVectorizer(analyzer='char', ngram_range=(k, k))
+        sequences = df[seq_column].astype(str).str.upper().fillna("")
+        X_counts = vectorizer.fit_transform(sequences)
+        X_freqs = normalize_counts(X_counts)
+        
+        # Generar nombres de columnas
+        kmer_cols = [f'{k}mer_{kmer}' for kmer in vectorizer.get_feature_names_out()]
+        kmer_df = pd.DataFrame(X_freqs.toarray(), columns=kmer_cols)
+        result_df = pd.concat([result_df.reset_index(drop=True), kmer_df], axis=1)
+
+    return result_df

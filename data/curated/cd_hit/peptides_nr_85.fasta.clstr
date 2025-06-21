@@ -1,98 +1,2798 @@
 >Cluster 0
-0	37aa, >peptide_19... *
+0	39aa, >peptide_101... *
 >Cluster 1
-0	36aa, >peptide_32... *
+0	39aa, >peptide_715... *
+1	39aa, >peptide_1398... at 92.31%
+2	39aa, >peptide_1750... at 94.87%
 >Cluster 2
-0	31aa, >peptide_34... *
+0	39aa, >peptide_1006... *
+1	38aa, >peptide_1652... at 92.11%
 >Cluster 3
-0	31aa, >peptide_44... *
+0	19aa, >peptide_574... at 100.00%
+1	32aa, >peptide_1117... at 100.00%
+2	39aa, >peptide_1464... *
+3	16aa, >peptide_1581... at 100.00%
 >Cluster 4
-0	29aa, >peptide_22... *
+0	30aa, >peptide_83... at 100.00%
+1	38aa, >peptide_97... *
+2	29aa, >peptide_408... at 100.00%
+3	22aa, >peptide_1833... at 100.00%
 >Cluster 5
-0	28aa, >peptide_10... *
+0	38aa, >peptide_519... *
+1	38aa, >peptide_1084... at 97.37%
 >Cluster 6
-0	28aa, >peptide_16... *
+0	38aa, >peptide_553... *
 >Cluster 7
-0	26aa, >peptide_3... *
+0	38aa, >peptide_802... *
 >Cluster 8
-0	25aa, >peptide_9... *
+0	35aa, >peptide_494... at 97.14%
+1	35aa, >peptide_1405... at 97.14%
+2	21aa, >peptide_1527... at 85.71%
+3	38aa, >peptide_1609... *
 >Cluster 9
-0	25aa, >peptide_42... *
+0	37aa, >peptide_19... *
 >Cluster 10
-0	24aa, >peptide_35... *
+0	37aa, >peptide_119... *
 >Cluster 11
-0	23aa, >peptide_18... *
+0	37aa, >peptide_135... *
+1	37aa, >peptide_173... at 86.49%
+2	37aa, >peptide_625... at 97.30%
+3	37aa, >peptide_898... at 89.19%
+4	37aa, >peptide_1347... at 86.49%
+5	37aa, >peptide_1614... at 86.49%
 >Cluster 12
-0	23aa, >peptide_45... *
+0	37aa, >peptide_394... *
 >Cluster 13
-0	23aa, >peptide_46... *
+0	37aa, >peptide_446... *
 >Cluster 14
-0	22aa, >peptide_6... *
+0	30aa, >peptide_78... at 100.00%
+1	37aa, >peptide_579... *
+2	37aa, >peptide_610... at 89.19%
+3	37aa, >peptide_1838... at 94.59%
 >Cluster 15
-0	21aa, >peptide_36... *
+0	37aa, >peptide_811... *
+1	37aa, >peptide_1087... at 97.30%
 >Cluster 16
-0	21aa, >peptide_50... *
+0	17aa, >peptide_77... at 94.12%
+1	37aa, >peptide_915... *
+2	12aa, >peptide_1107... at 100.00%
+3	37aa, >peptide_1648... at 97.30%
+4	13aa, >peptide_1708... at 100.00%
+5	12aa, >peptide_1881... at 91.67%
 >Cluster 17
-0	20aa, >peptide_2... *
+0	37aa, >peptide_935... *
 >Cluster 18
-0	20aa, >peptide_13... *
+0	37aa, >peptide_998... *
 >Cluster 19
-0	20aa, >peptide_21... *
+0	37aa, >peptide_1248... *
 >Cluster 20
-0	20aa, >peptide_27... *
+0	37aa, >peptide_1576... *
 >Cluster 21
-0	20aa, >peptide_29... *
+0	37aa, >peptide_1605... *
 >Cluster 22
-0	20aa, >peptide_40... *
+0	37aa, >peptide_1828... *
 >Cluster 23
-0	19aa, >peptide_5... *
+0	37aa, >peptide_1908... *
 >Cluster 24
-0	19aa, >peptide_49... *
+0	36aa, >peptide_32... *
+1	24aa, >peptide_393... at 100.00%
+2	12aa, >peptide_756... at 100.00%
 >Cluster 25
-0	18aa, >peptide_14... *
+0	36aa, >peptide_682... *
+1	36aa, >peptide_1079... at 94.44%
 >Cluster 26
-0	18aa, >peptide_23... *
+0	29aa, >peptide_260... at 93.10%
+1	28aa, >peptide_656... at 100.00%
+2	35aa, >peptide_758... *
+3	28aa, >peptide_789... at 89.29%
+4	28aa, >peptide_823... at 96.43%
+5	29aa, >peptide_839... at 100.00%
+6	29aa, >peptide_1265... at 86.21%
+7	18aa, >peptide_1329... at 100.00%
+8	29aa, >peptide_1559... at 96.55%
+9	29aa, >peptide_1776... at 96.55%
+10	17aa, >peptide_1916... at 100.00%
 >Cluster 27
-0	18aa, >peptide_26... *
+0	35aa, >peptide_1088... *
 >Cluster 28
-0	18aa, >peptide_28... *
+0	35aa, >peptide_1338... *
+1	17aa, >peptide_1768... at 100.00%
 >Cluster 29
-0	18aa, >peptide_30... *
+0	35aa, >peptide_1463... *
 >Cluster 30
-0	18aa, >peptide_41... *
+0	35aa, >peptide_1676... *
+1	35aa, >peptide_1677... at 85.71%
+2	35aa, >peptide_1730... at 94.29%
+3	35aa, >peptide_1905... at 94.29%
 >Cluster 31
-0	18aa, >peptide_47... *
+0	35aa, >peptide_1751... *
 >Cluster 32
-0	16aa, >peptide_7... *
+0	35aa, >peptide_1876... *
 >Cluster 33
-0	16aa, >peptide_17... *
+0	16aa, >peptide_138... at 100.00%
+1	34aa, >peptide_197... *
+2	32aa, >peptide_929... at 100.00%
 >Cluster 34
-0	14aa, >peptide_1... *
+0	34aa, >peptide_407... *
+1	11aa, >peptide_734... at 90.91%
 >Cluster 35
-0	14aa, >peptide_20... *
+0	34aa, >peptide_545... *
+1	11aa, >peptide_906... at 90.91%
+2	11aa, >peptide_1055... at 100.00%
+3	11aa, >peptide_1208... at 90.91%
 >Cluster 36
-0	14aa, >peptide_31... *
+0	34aa, >peptide_1317... *
+1	21aa, >peptide_1867... at 85.71%
 >Cluster 37
-0	14aa, >peptide_48... *
+0	15aa, >peptide_65... at 93.33%
+1	16aa, >peptide_379... at 93.75%
+2	12aa, >peptide_413... at 100.00%
+3	29aa, >peptide_419... at 93.10%
+4	15aa, >peptide_466... at 93.33%
+5	15aa, >peptide_833... at 93.33%
+6	29aa, >peptide_1111... at 100.00%
+7	13aa, >peptide_1239... at 100.00%
+8	34aa, >peptide_1388... *
+9	19aa, >peptide_1511... at 100.00%
+10	14aa, >peptide_1681... at 100.00%
+11	15aa, >peptide_1842... at 93.33%
+12	15aa, >peptide_1852... at 100.00%
 >Cluster 38
-0	13aa, >peptide_8... *
+0	33aa, >peptide_395... *
 >Cluster 39
-0	13aa, >peptide_11... *
+0	33aa, >peptide_573... *
 >Cluster 40
-0	13aa, >peptide_12... *
+0	33aa, >peptide_599... *
 >Cluster 41
-0	13aa, >peptide_24... *
+0	33aa, >peptide_649... *
 >Cluster 42
-0	13aa, >peptide_25... *
+0	33aa, >peptide_677... *
 >Cluster 43
-0	13aa, >peptide_37... *
+0	33aa, >peptide_754... *
+1	16aa, >peptide_1889... at 100.00%
 >Cluster 44
-0	13aa, >peptide_38... *
+0	33aa, >peptide_920... *
+1	33aa, >peptide_1890... at 90.91%
 >Cluster 45
-0	13aa, >peptide_43... *
+0	33aa, >peptide_1101... *
 >Cluster 46
-0	12aa, >peptide_4... *
+0	33aa, >peptide_1412... *
 >Cluster 47
-0	12aa, >peptide_33... *
+0	33aa, >peptide_1429... *
 >Cluster 48
-0	11aa, >peptide_15... *
+0	33aa, >peptide_1565... *
+>Cluster 49
+0	27aa, >peptide_845... at 100.00%
+1	33aa, >peptide_1811... *
+>Cluster 50
+0	32aa, >peptide_68... *
+1	32aa, >peptide_836... at 90.62%
+2	26aa, >peptide_1322... at 88.46%
+3	32aa, >peptide_1906... at 90.62%
+>Cluster 51
+0	16aa, >peptide_53... at 100.00%
+1	32aa, >peptide_121... *
+2	14aa, >peptide_416... at 92.86%
+3	14aa, >peptide_471... at 85.71%
+4	12aa, >peptide_552... at 91.67%
+5	28aa, >peptide_693... at 100.00%
+6	13aa, >peptide_894... at 92.31%
+7	12aa, >peptide_1154... at 91.67%
+8	14aa, >peptide_1190... at 85.71%
+9	12aa, >peptide_1236... at 100.00%
+10	20aa, >peptide_1575... at 100.00%
+11	12aa, >peptide_1626... at 100.00%
+12	24aa, >peptide_1779... at 100.00%
+13	18aa, >peptide_1901... at 94.44%
+>Cluster 52
+0	32aa, >peptide_192... *
+>Cluster 53
+0	32aa, >peptide_321... *
+>Cluster 54
+0	32aa, >peptide_565... *
+1	27aa, >peptide_638... at 100.00%
+2	32aa, >peptide_1267... at 93.75%
+3	27aa, >peptide_1375... at 100.00%
+4	32aa, >peptide_1691... at 93.75%
+>Cluster 55
+0	32aa, >peptide_696... *
+>Cluster 56
+0	32aa, >peptide_720... *
+1	24aa, >peptide_1589... at 100.00%
+2	28aa, >peptide_1645... at 100.00%
+>Cluster 57
+0	32aa, >peptide_951... *
+>Cluster 58
+0	32aa, >peptide_1127... *
+>Cluster 59
+0	32aa, >peptide_1170... *
+>Cluster 60
+0	31aa, >peptide_34... *
+>Cluster 61
+0	31aa, >peptide_44... *
+1	31aa, >peptide_333... at 87.10%
+2	31aa, >peptide_812... at 93.55%
+3	30aa, >peptide_872... at 96.67%
+4	31aa, >peptide_1103... at 93.55%
+5	31aa, >peptide_1436... at 93.55%
+6	31aa, >peptide_1502... at 96.77%
+>Cluster 62
+0	31aa, >peptide_211... *
+1	30aa, >peptide_355... at 86.67%
+>Cluster 63
+0	31aa, >peptide_220... *
+>Cluster 64
+0	14aa, >peptide_1... at 92.86%
+1	26aa, >peptide_84... at 96.15%
+2	15aa, >peptide_110... at 93.33%
+3	31aa, >peptide_305... *
+4	16aa, >peptide_346... at 93.75%
+5	15aa, >peptide_502... at 86.67%
+6	15aa, >peptide_533... at 100.00%
+7	15aa, >peptide_577... at 93.33%
+8	15aa, >peptide_653... at 93.33%
+9	26aa, >peptide_658... at 92.31%
+10	27aa, >peptide_678... at 100.00%
+11	14aa, >peptide_934... at 100.00%
+12	26aa, >peptide_1092... at 92.31%
+13	26aa, >peptide_1098... at 92.31%
+14	26aa, >peptide_1145... at 92.31%
+15	23aa, >peptide_1395... at 95.65%
+16	26aa, >peptide_1506... at 92.31%
+17	15aa, >peptide_1603... at 93.33%
+18	26aa, >peptide_1623... at 92.31%
+19	13aa, >peptide_1790... at 100.00%
+20	15aa, >peptide_1824... at 93.33%
+21	26aa, >peptide_1907... at 92.31%
+>Cluster 65
+0	31aa, >peptide_447... *
+>Cluster 66
+0	14aa, >peptide_164... at 85.71%
+1	15aa, >peptide_198... at 93.33%
+2	18aa, >peptide_235... at 100.00%
+3	19aa, >peptide_352... at 89.47%
+4	31aa, >peptide_462... *
+5	17aa, >peptide_672... at 88.24%
+6	19aa, >peptide_875... at 100.00%
+7	19aa, >peptide_878... at 100.00%
+8	23aa, >peptide_1074... at 100.00%
+9	12aa, >peptide_1118... at 91.67%
+10	17aa, >peptide_1611... at 100.00%
+>Cluster 67
+0	22aa, >peptide_6... at 95.45%
+1	20aa, >peptide_223... at 95.00%
+2	31aa, >peptide_615... *
+3	31aa, >peptide_932... at 96.77%
+4	11aa, >peptide_1040... at 100.00%
+5	30aa, >peptide_1235... at 96.67%
+6	12aa, >peptide_1500... at 91.67%
+>Cluster 68
+0	31aa, >peptide_938... *
+>Cluster 69
+0	31aa, >peptide_1319... *
+>Cluster 70
+0	31aa, >peptide_1350... *
+>Cluster 71
+0	31aa, >peptide_1493... *
+>Cluster 72
+0	30aa, >peptide_70... *
+>Cluster 73
+0	30aa, >peptide_71... *
+>Cluster 74
+0	30aa, >peptide_100... *
+1	27aa, >peptide_640... at 100.00%
+2	24aa, >peptide_1323... at 100.00%
+3	21aa, >peptide_1353... at 100.00%
+4	18aa, >peptide_1539... at 100.00%
+>Cluster 75
+0	30aa, >peptide_256... *
+>Cluster 76
+0	30aa, >peptide_302... *
+1	30aa, >peptide_708... at 93.33%
+2	30aa, >peptide_893... at 90.00%
+3	30aa, >peptide_1187... at 96.67%
+4	30aa, >peptide_1782... at 90.00%
+>Cluster 77
+0	18aa, >peptide_26... at 100.00%
+1	21aa, >peptide_310... at 100.00%
+2	30aa, >peptide_375... *
+3	27aa, >peptide_832... at 100.00%
+4	24aa, >peptide_855... at 100.00%
+>Cluster 78
+0	30aa, >peptide_423... *
+1	30aa, >peptide_513... at 96.67%
+2	30aa, >peptide_816... at 96.67%
+3	30aa, >peptide_1834... at 96.67%
+>Cluster 79
+0	30aa, >peptide_592... *
+>Cluster 80
+0	30aa, >peptide_611... *
+>Cluster 81
+0	30aa, >peptide_881... *
+1	30aa, >peptide_1745... at 86.67%
+>Cluster 82
+0	30aa, >peptide_914... *
+>Cluster 83
+0	19aa, >peptide_151... at 89.47%
+1	30aa, >peptide_950... *
+2	23aa, >peptide_1059... at 100.00%
+3	14aa, >peptide_1438... at 92.86%
+4	19aa, >peptide_1818... at 100.00%
+>Cluster 84
+0	29aa, >peptide_286... at 89.66%
+1	29aa, >peptide_526... at 86.21%
+2	29aa, >peptide_607... at 89.66%
+3	29aa, >peptide_999... at 89.66%
+4	30aa, >peptide_1075... *
+5	30aa, >peptide_1615... at 86.67%
+>Cluster 85
+0	29aa, >peptide_509... at 93.10%
+1	29aa, >peptide_699... at 96.55%
+2	30aa, >peptide_1220... *
+3	29aa, >peptide_1763... at 89.66%
+>Cluster 86
+0	30aa, >peptide_1233... *
+>Cluster 87
+0	30aa, >peptide_1243... *
+>Cluster 88
+0	30aa, >peptide_1590... *
+>Cluster 89
+0	30aa, >peptide_1640... *
+>Cluster 90
+0	29aa, >peptide_22... *
+>Cluster 91
+0	29aa, >peptide_79... *
+>Cluster 92
+0	29aa, >peptide_111... *
+>Cluster 93
+0	29aa, >peptide_229... *
+>Cluster 94
+0	29aa, >peptide_557... *
+>Cluster 95
+0	29aa, >peptide_587... *
+1	29aa, >peptide_767... at 93.10%
+2	29aa, >peptide_1115... at 86.21%
+3	29aa, >peptide_1491... at 89.66%
+>Cluster 96
+0	29aa, >peptide_589... *
+1	29aa, >peptide_621... at 96.55%
+2	29aa, >peptide_622... at 93.10%
+3	29aa, >peptide_701... at 93.10%
+4	29aa, >peptide_768... at 96.55%
+5	29aa, >peptide_965... at 93.10%
+6	29aa, >peptide_1687... at 96.55%
+>Cluster 97
+0	29aa, >peptide_617... *
+>Cluster 98
+0	29aa, >peptide_722... *
+1	29aa, >peptide_1919... at 96.55%
+>Cluster 99
+0	29aa, >peptide_760... *
+1	14aa, >peptide_1832... at 100.00%
+>Cluster 100
+0	29aa, >peptide_937... *
+>Cluster 101
+0	29aa, >peptide_968... *
+1	29aa, >peptide_971... at 96.55%
+>Cluster 102
+0	29aa, >peptide_1078... *
+>Cluster 103
+0	29aa, >peptide_1089... *
+>Cluster 104
+0	28aa, >peptide_904... at 85.71%
+1	29aa, >peptide_1096... *
+2	28aa, >peptide_1571... at 92.86%
+>Cluster 105
+0	29aa, >peptide_1198... *
+>Cluster 106
+0	28aa, >peptide_1289... at 100.00%
+1	29aa, >peptide_1332... *
+>Cluster 107
+0	29aa, >peptide_1394... *
+>Cluster 108
+0	29aa, >peptide_1437... *
+1	22aa, >peptide_1630... at 100.00%
+>Cluster 109
+0	29aa, >peptide_1561... *
+>Cluster 110
+0	29aa, >peptide_1636... *
+>Cluster 111
+0	29aa, >peptide_1704... *
+>Cluster 112
+0	26aa, >peptide_1176... at 88.46%
+1	29aa, >peptide_1722... *
+>Cluster 113
+0	29aa, >peptide_1752... *
+>Cluster 114
+0	29aa, >peptide_1755... *
+1	29aa, >peptide_1795... at 93.10%
+>Cluster 115
+0	28aa, >peptide_10... *
+>Cluster 116
+0	28aa, >peptide_16... *
+>Cluster 117
+0	28aa, >peptide_146... *
+1	28aa, >peptide_521... at 96.43%
+2	25aa, >peptide_1600... at 96.00%
+>Cluster 118
+0	28aa, >peptide_189... *
+1	28aa, >peptide_1892... at 96.43%
+>Cluster 119
+0	28aa, >peptide_215... *
+1	28aa, >peptide_716... at 92.86%
+2	28aa, >peptide_753... at 85.71%
+3	28aa, >peptide_1068... at 85.71%
+4	28aa, >peptide_1202... at 92.86%
+>Cluster 120
+0	20aa, >peptide_130... at 95.00%
+1	16aa, >peptide_131... at 93.75%
+2	28aa, >peptide_290... *
+3	28aa, >peptide_359... at 92.86%
+4	13aa, >peptide_404... at 92.31%
+5	16aa, >peptide_469... at 100.00%
+6	28aa, >peptide_498... at 96.43%
+7	15aa, >peptide_581... at 93.33%
+8	24aa, >peptide_586... at 95.83%
+9	12aa, >peptide_675... at 100.00%
+10	28aa, >peptide_690... at 92.86%
+11	28aa, >peptide_741... at 96.43%
+12	16aa, >peptide_1030... at 93.75%
+13	20aa, >peptide_1046... at 95.00%
+14	14aa, >peptide_1114... at 85.71%
+15	12aa, >peptide_1360... at 100.00%
+16	13aa, >peptide_1474... at 100.00%
+17	28aa, >peptide_1809... at 96.43%
+18	28aa, >peptide_1820... at 92.86%
+>Cluster 121
+0	28aa, >peptide_422... *
+1	28aa, >peptide_1705... at 92.86%
+>Cluster 122
+0	28aa, >peptide_538... *
+>Cluster 123
+0	28aa, >peptide_551... *
+>Cluster 124
+0	28aa, >peptide_769... *
+>Cluster 125
+0	28aa, >peptide_887... *
+>Cluster 126
+0	28aa, >peptide_986... *
+>Cluster 127
+0	14aa, >peptide_31... at 100.00%
+1	24aa, >peptide_115... at 100.00%
+2	20aa, >peptide_536... at 100.00%
+3	27aa, >peptide_550... at 100.00%
+4	16aa, >peptide_782... at 100.00%
+5	21aa, >peptide_784... at 100.00%
+6	17aa, >peptide_897... at 100.00%
+7	24aa, >peptide_1005... at 95.83%
+8	28aa, >peptide_1060... *
+9	23aa, >peptide_1415... at 100.00%
+10	21aa, >peptide_1528... at 100.00%
+11	17aa, >peptide_1879... at 100.00%
+>Cluster 128
+0	28aa, >peptide_1077... *
+1	28aa, >peptide_1139... at 92.86%
+>Cluster 129
+0	28aa, >peptide_1175... *
+>Cluster 130
+0	28aa, >peptide_1189... *
+>Cluster 131
+0	28aa, >peptide_1264... *
+1	15aa, >peptide_1617... at 100.00%
+>Cluster 132
+0	28aa, >peptide_1284... *
+>Cluster 133
+0	28aa, >peptide_1408... *
+>Cluster 134
+0	28aa, >peptide_1533... *
+>Cluster 135
+0	28aa, >peptide_1607... *
+>Cluster 136
+0	28aa, >peptide_1618... *
+>Cluster 137
+0	28aa, >peptide_1654... *
+>Cluster 138
+0	28aa, >peptide_1788... *
+>Cluster 139
+0	23aa, >peptide_529... at 91.30%
+1	24aa, >peptide_664... at 100.00%
+2	20aa, >peptide_707... at 100.00%
+3	12aa, >peptide_1191... at 100.00%
+4	24aa, >peptide_1560... at 100.00%
+5	24aa, >peptide_1673... at 100.00%
+6	24aa, >peptide_1762... at 100.00%
+7	28aa, >peptide_1813... *
+8	16aa, >peptide_1862... at 100.00%
+>Cluster 140
+0	28aa, >peptide_1870... *
+>Cluster 141
+0	27aa, >peptide_91... *
+1	27aa, >peptide_945... at 92.59%
+>Cluster 142
+0	27aa, >peptide_98... *
+>Cluster 143
+0	27aa, >peptide_163... *
+1	18aa, >peptide_406... at 100.00%
+2	26aa, >peptide_1888... at 100.00%
+>Cluster 144
+0	27aa, >peptide_230... *
+>Cluster 145
+0	27aa, >peptide_231... *
+1	27aa, >peptide_1743... at 96.30%
+>Cluster 146
+0	27aa, >peptide_568... *
+>Cluster 147
+0	27aa, >peptide_706... *
+>Cluster 148
+0	27aa, >peptide_736... *
+>Cluster 149
+0	27aa, >peptide_834... *
+>Cluster 150
+0	27aa, >peptide_870... *
+>Cluster 151
+0	27aa, >peptide_1303... *
+>Cluster 152
+0	27aa, >peptide_1304... *
+>Cluster 153
+0	27aa, >peptide_1406... *
+>Cluster 154
+0	27aa, >peptide_1594... *
+>Cluster 155
+0	27aa, >peptide_1606... *
+>Cluster 156
+0	27aa, >peptide_1700... *
+>Cluster 157
+0	27aa, >peptide_1716... *
+>Cluster 158
+0	26aa, >peptide_3... *
+1	20aa, >peptide_234... at 100.00%
+2	24aa, >peptide_508... at 100.00%
+3	22aa, >peptide_636... at 100.00%
+4	13aa, >peptide_646... at 100.00%
+5	22aa, >peptide_655... at 100.00%
+6	12aa, >peptide_689... at 100.00%
+7	18aa, >peptide_731... at 100.00%
+8	20aa, >peptide_818... at 100.00%
+9	16aa, >peptide_933... at 100.00%
+10	13aa, >peptide_948... at 100.00%
+11	15aa, >peptide_962... at 100.00%
+12	15aa, >peptide_1162... at 100.00%
+13	24aa, >peptide_1286... at 100.00%
+14	16aa, >peptide_1480... at 100.00%
+15	11aa, >peptide_1821... at 100.00%
+16	14aa, >peptide_1826... at 100.00%
+>Cluster 159
+0	26aa, >peptide_63... *
+>Cluster 160
+0	26aa, >peptide_105... *
+1	23aa, >peptide_418... at 95.65%
+2	26aa, >peptide_1268... at 96.15%
+3	26aa, >peptide_1773... at 92.31%
+4	26aa, >peptide_1864... at 92.31%
+>Cluster 161
+0	26aa, >peptide_233... *
+1	26aa, >peptide_491... at 92.31%
+>Cluster 162
+0	26aa, >peptide_294... *
+1	18aa, >peptide_441... at 94.44%
+2	16aa, >peptide_980... at 93.75%
+>Cluster 163
+0	26aa, >peptide_609... *
+>Cluster 164
+0	26aa, >peptide_616... *
+>Cluster 165
+0	22aa, >peptide_368... at 95.45%
+1	26aa, >peptide_921... *
+2	19aa, >peptide_1039... at 94.74%
+3	23aa, >peptide_1135... at 95.65%
+4	15aa, >peptide_1522... at 100.00%
+5	26aa, >peptide_1848... at 96.15%
+>Cluster 166
+0	26aa, >peptide_1029... *
+1	20aa, >peptide_1454... at 100.00%
+>Cluster 167
+0	26aa, >peptide_1186... *
+>Cluster 168
+0	26aa, >peptide_1260... *
+>Cluster 169
+0	26aa, >peptide_1422... *
+>Cluster 170
+0	25aa, >peptide_277... at 100.00%
+1	21aa, >peptide_454... at 85.71%
+2	25aa, >peptide_460... at 100.00%
+3	24aa, >peptide_831... at 95.83%
+4	26aa, >peptide_1423... *
+5	26aa, >peptide_1451... at 96.15%
+6	24aa, >peptide_1739... at 100.00%
+>Cluster 171
+0	26aa, >peptide_1688... *
+>Cluster 172
+0	26aa, >peptide_1793... *
+>Cluster 173
+0	25aa, >peptide_9... *
+1	21aa, >peptide_263... at 95.24%
+2	25aa, >peptide_267... at 96.00%
+3	25aa, >peptide_303... at 88.00%
+4	25aa, >peptide_427... at 88.00%
+5	23aa, >peptide_518... at 95.65%
+6	25aa, >peptide_548... at 88.00%
+7	25aa, >peptide_783... at 88.00%
+8	25aa, >peptide_907... at 88.00%
+9	23aa, >peptide_963... at 95.65%
+10	21aa, >peptide_977... at 95.24%
+11	25aa, >peptide_1094... at 88.00%
+12	25aa, >peptide_1119... at 88.00%
+13	25aa, >peptide_1402... at 88.00%
+14	25aa, >peptide_1548... at 96.00%
+15	25aa, >peptide_1785... at 96.00%
+>Cluster 174
+0	25aa, >peptide_42... *
+1	25aa, >peptide_1274... at 92.00%
+>Cluster 175
+0	25aa, >peptide_95... *
+>Cluster 176
+0	25aa, >peptide_186... *
+>Cluster 177
+0	18aa, >peptide_113... at 100.00%
+1	25aa, >peptide_218... *
+2	25aa, >peptide_331... at 92.00%
+3	25aa, >peptide_483... at 92.00%
+4	25aa, >peptide_916... at 92.00%
+5	25aa, >peptide_1061... at 92.00%
+6	25aa, >peptide_1294... at 92.00%
+7	25aa, >peptide_1321... at 88.00%
+8	25aa, >peptide_1452... at 92.00%
+9	25aa, >peptide_1455... at 92.00%
+10	25aa, >peptide_1558... at 92.00%
+11	25aa, >peptide_1860... at 96.00%
+12	25aa, >peptide_1915... at 92.00%
+>Cluster 178
+0	25aa, >peptide_264... *
+>Cluster 179
+0	25aa, >peptide_325... *
+1	22aa, >peptide_1707... at 95.45%
+>Cluster 180
+0	25aa, >peptide_369... *
+>Cluster 181
+0	25aa, >peptide_378... *
+1	25aa, >peptide_1326... at 88.00%
+>Cluster 182
+0	25aa, >peptide_468... *
+1	25aa, >peptide_1263... at 92.00%
+>Cluster 183
+0	25aa, >peptide_484... *
+>Cluster 184
+0	25aa, >peptide_504... *
+>Cluster 185
+0	25aa, >peptide_555... *
+>Cluster 186
+0	25aa, >peptide_567... *
+1	25aa, >peptide_1486... at 92.00%
+>Cluster 187
+0	25aa, >peptide_600... *
+>Cluster 188
+0	25aa, >peptide_602... *
+1	25aa, >peptide_828... at 92.00%
+>Cluster 189
+0	25aa, >peptide_683... *
+1	25aa, >peptide_1223... at 92.00%
+>Cluster 190
+0	25aa, >peptide_765... *
+1	22aa, >peptide_985... at 86.36%
+>Cluster 191
+0	25aa, >peptide_846... *
+1	25aa, >peptide_1105... at 88.00%
+>Cluster 192
+0	25aa, >peptide_931... *
+>Cluster 193
+0	25aa, >peptide_955... *
+>Cluster 194
+0	25aa, >peptide_988... *
+1	25aa, >peptide_1181... at 96.00%
+>Cluster 195
+0	25aa, >peptide_991... *
+1	25aa, >peptide_1697... at 96.00%
+>Cluster 196
+0	25aa, >peptide_1041... *
+1	25aa, >peptide_1272... at 88.00%
+>Cluster 197
+0	25aa, >peptide_1043... *
+>Cluster 198
+0	25aa, >peptide_1082... *
+1	25aa, >peptide_1439... at 88.00%
+>Cluster 199
+0	25aa, >peptide_1280... *
+>Cluster 200
+0	25aa, >peptide_1311... *
+>Cluster 201
+0	25aa, >peptide_1363... *
+>Cluster 202
+0	25aa, >peptide_1516... *
+>Cluster 203
+0	25aa, >peptide_1592... *
+>Cluster 204
+0	23aa, >peptide_261... at 91.30%
+1	25aa, >peptide_1642... *
+>Cluster 205
+0	25aa, >peptide_1671... *
+>Cluster 206
+0	25aa, >peptide_1696... *
+>Cluster 207
+0	25aa, >peptide_1718... *
+>Cluster 208
+0	15aa, >peptide_311... at 100.00%
+1	16aa, >peptide_1195... at 93.75%
+2	25aa, >peptide_1791... *
+>Cluster 209
+0	25aa, >peptide_1911... *
+>Cluster 210
+0	24aa, >peptide_35... *
+1	24aa, >peptide_402... at 87.50%
+2	24aa, >peptide_633... at 95.83%
+3	24aa, >peptide_1505... at 87.50%
+>Cluster 211
+0	24aa, >peptide_117... *
+1	24aa, >peptide_177... at 95.83%
+2	24aa, >peptide_687... at 95.83%
+3	24aa, >peptide_810... at 91.67%
+4	24aa, >peptide_1271... at 87.50%
+5	24aa, >peptide_1296... at 87.50%
+6	24aa, >peptide_1650... at 87.50%
+>Cluster 212
+0	24aa, >peptide_122... *
+>Cluster 213
+0	24aa, >peptide_126... *
+>Cluster 214
+0	24aa, >peptide_226... *
+1	24aa, >peptide_1258... at 87.50%
+2	24aa, >peptide_1421... at 95.83%
+>Cluster 215
+0	24aa, >peptide_232... *
+1	24aa, >peptide_514... at 91.67%
+2	24aa, >peptide_967... at 91.67%
+3	24aa, >peptide_1136... at 91.67%
+4	24aa, >peptide_1173... at 91.67%
+5	24aa, >peptide_1259... at 91.67%
+6	24aa, >peptide_1293... at 91.67%
+7	24aa, >peptide_1733... at 95.83%
+>Cluster 216
+0	24aa, >peptide_240... *
+1	24aa, >peptide_1625... at 91.67%
+>Cluster 217
+0	24aa, >peptide_275... *
+1	24aa, >peptide_1393... at 95.83%
+>Cluster 218
+0	24aa, >peptide_384... *
+>Cluster 219
+0	24aa, >peptide_386... *
+1	24aa, >peptide_1646... at 91.67%
+>Cluster 220
+0	24aa, >peptide_438... *
+1	24aa, >peptide_718... at 87.50%
+>Cluster 221
+0	24aa, >peptide_535... *
+1	11aa, >peptide_969... at 90.91%
+2	13aa, >peptide_1373... at 100.00%
+>Cluster 222
+0	24aa, >peptide_612... *
+>Cluster 223
+0	24aa, >peptide_652... *
+1	24aa, >peptide_1071... at 91.67%
+>Cluster 224
+0	24aa, >peptide_748... *
+>Cluster 225
+0	24aa, >peptide_757... *
+>Cluster 226
+0	24aa, >peptide_766... *
+1	24aa, >peptide_1510... at 87.50%
+>Cluster 227
+0	11aa, >peptide_727... at 90.91%
+1	24aa, >peptide_771... *
+>Cluster 228
+0	24aa, >peptide_774... *
+>Cluster 229
+0	24aa, >peptide_851... *
+>Cluster 230
+0	17aa, >peptide_485... at 100.00%
+1	24aa, >peptide_896... *
+2	11aa, >peptide_1292... at 90.91%
+>Cluster 231
+0	24aa, >peptide_959... *
+>Cluster 232
+0	24aa, >peptide_1037... *
+>Cluster 233
+0	24aa, >peptide_1080... *
+>Cluster 234
+0	24aa, >peptide_1112... *
+>Cluster 235
+0	24aa, >peptide_1171... *
+>Cluster 236
+0	24aa, >peptide_1201... *
+>Cluster 237
+0	21aa, >peptide_239... at 100.00%
+1	18aa, >peptide_798... at 100.00%
+2	24aa, >peptide_1215... *
+>Cluster 238
+0	24aa, >peptide_1345... *
+>Cluster 239
+0	24aa, >peptide_1372... *
+>Cluster 240
+0	24aa, >peptide_1374... *
+>Cluster 241
+0	24aa, >peptide_1384... *
+1	24aa, >peptide_1557... at 91.67%
+>Cluster 242
+0	24aa, >peptide_1425... *
+>Cluster 243
+0	24aa, >peptide_1426... *
+>Cluster 244
+0	24aa, >peptide_1473... *
+>Cluster 245
+0	24aa, >peptide_1495... *
+>Cluster 246
+0	24aa, >peptide_1509... *
+>Cluster 247
+0	24aa, >peptide_1541... *
+>Cluster 248
+0	24aa, >peptide_1715... *
+>Cluster 249
+0	24aa, >peptide_1721... *
+>Cluster 250
+0	24aa, >peptide_1735... *
+>Cluster 251
+0	24aa, >peptide_1796... *
+1	24aa, >peptide_1887... at 95.83%
+>Cluster 252
+0	24aa, >peptide_1822... *
+>Cluster 253
+0	23aa, >peptide_18... *
+1	13aa, >peptide_799... at 92.31%
+2	13aa, >peptide_1461... at 100.00%
+>Cluster 254
+0	23aa, >peptide_45... *
+>Cluster 255
+0	23aa, >peptide_46... *
+>Cluster 256
+0	23aa, >peptide_85... *
+1	23aa, >peptide_1861... at 91.30%
+>Cluster 257
+0	23aa, >peptide_107... *
+1	23aa, >peptide_259... at 91.30%
+2	23aa, >peptide_580... at 91.30%
+3	23aa, >peptide_659... at 95.65%
+4	23aa, >peptide_763... at 91.30%
+5	23aa, >peptide_1232... at 86.96%
+6	23aa, >peptide_1492... at 86.96%
+>Cluster 258
+0	23aa, >peptide_123... *
+>Cluster 259
+0	23aa, >peptide_136... *
+>Cluster 260
+0	23aa, >peptide_140... *
+>Cluster 261
+0	23aa, >peptide_141... *
+1	12aa, >peptide_482... at 91.67%
+2	23aa, >peptide_635... at 86.96%
+3	23aa, >peptide_702... at 95.65%
+4	23aa, >peptide_807... at 91.30%
+>Cluster 262
+0	14aa, >peptide_89... at 100.00%
+1	23aa, >peptide_162... *
+2	16aa, >peptide_499... at 87.50%
+3	14aa, >peptide_1034... at 92.86%
+>Cluster 263
+0	23aa, >peptide_178... *
+1	23aa, >peptide_490... at 86.96%
+2	23aa, >peptide_511... at 95.65%
+3	17aa, >peptide_1290... at 100.00%
+4	23aa, >peptide_1819... at 91.30%
+>Cluster 264
+0	23aa, >peptide_209... *
+1	23aa, >peptide_1275... at 95.65%
+>Cluster 265
+0	23aa, >peptide_247... *
+>Cluster 266
+0	23aa, >peptide_317... *
+1	23aa, >peptide_1199... at 91.30%
+>Cluster 267
+0	23aa, >peptide_371... *
+1	23aa, >peptide_1315... at 95.65%
+>Cluster 268
+0	23aa, >peptide_415... *
+>Cluster 269
+0	23aa, >peptide_425... *
+1	19aa, >peptide_841... at 100.00%
+>Cluster 270
+0	23aa, >peptide_426... *
+>Cluster 271
+0	23aa, >peptide_432... *
+>Cluster 272
+0	23aa, >peptide_481... *
+>Cluster 273
+0	23aa, >peptide_496... *
+>Cluster 274
+0	23aa, >peptide_542... *
+>Cluster 275
+0	23aa, >peptide_584... *
+>Cluster 276
+0	23aa, >peptide_588... *
+>Cluster 277
+0	23aa, >peptide_650... *
+>Cluster 278
+0	23aa, >peptide_671... *
+1	16aa, >peptide_1003... at 87.50%
+2	19aa, >peptide_1023... at 94.74%
+>Cluster 279
+0	23aa, >peptide_695... *
+1	23aa, >peptide_1206... at 91.30%
+>Cluster 280
+0	23aa, >peptide_814... *
+>Cluster 281
+0	23aa, >peptide_830... *
+>Cluster 282
+0	23aa, >peptide_856... *
+>Cluster 283
+0	23aa, >peptide_866... *
+1	23aa, >peptide_1021... at 91.30%
+>Cluster 284
+0	23aa, >peptide_919... *
+1	23aa, >peptide_1899... at 91.30%
+>Cluster 285
+0	23aa, >peptide_1031... *
+>Cluster 286
+0	23aa, >peptide_1064... *
+>Cluster 287
+0	23aa, >peptide_1066... *
+>Cluster 288
+0	23aa, >peptide_1234... *
+>Cluster 289
+0	23aa, >peptide_1295... *
+>Cluster 290
+0	23aa, >peptide_1361... *
+>Cluster 291
+0	23aa, >peptide_1414... *
+>Cluster 292
+0	23aa, >peptide_1546... *
+>Cluster 293
+0	23aa, >peptide_1633... *
+>Cluster 294
+0	23aa, >peptide_1668... *
+>Cluster 295
+0	23aa, >peptide_1689... *
+>Cluster 296
+0	23aa, >peptide_1709... *
+>Cluster 297
+0	23aa, >peptide_1900... *
+>Cluster 298
+0	22aa, >peptide_93... *
+1	22aa, >peptide_193... at 90.91%
+2	22aa, >peptide_205... at 95.45%
+3	22aa, >peptide_304... at 90.91%
+4	22aa, >peptide_372... at 95.45%
+5	22aa, >peptide_648... at 90.91%
+6	22aa, >peptide_752... at 90.91%
+7	22aa, >peptide_787... at 90.91%
+8	22aa, >peptide_1032... at 90.91%
+9	22aa, >peptide_1086... at 90.91%
+10	22aa, >peptide_1257... at 90.91%
+11	22aa, >peptide_1362... at 90.91%
+12	22aa, >peptide_1466... at 90.91%
+13	22aa, >peptide_1797... at 90.91%
+14	22aa, >peptide_1920... at 90.91%
+>Cluster 299
+0	22aa, >peptide_270... *
+>Cluster 300
+0	22aa, >peptide_326... *
+>Cluster 301
+0	22aa, >peptide_382... *
+>Cluster 302
+0	22aa, >peptide_522... *
+>Cluster 303
+0	22aa, >peptide_523... *
+>Cluster 304
+0	22aa, >peptide_571... *
+>Cluster 305
+0	22aa, >peptide_694... *
+>Cluster 306
+0	22aa, >peptide_762... *
+1	18aa, >peptide_1013... at 88.89%
+>Cluster 307
+0	22aa, >peptide_773... *
+>Cluster 308
+0	22aa, >peptide_827... *
+>Cluster 309
+0	22aa, >peptide_865... *
+>Cluster 310
+0	22aa, >peptide_913... *
+1	22aa, >peptide_958... at 90.91%
+2	22aa, >peptide_1279... at 95.45%
+3	22aa, >peptide_1531... at 95.45%
+>Cluster 311
+0	22aa, >peptide_918... *
+>Cluster 312
+0	22aa, >peptide_1083... *
+>Cluster 313
+0	22aa, >peptide_1146... *
+>Cluster 314
+0	22aa, >peptide_1253... *
+>Cluster 315
+0	22aa, >peptide_1417... *
+>Cluster 316
+0	22aa, >peptide_1483... *
+>Cluster 317
+0	22aa, >peptide_1644... *
+>Cluster 318
+0	22aa, >peptide_1692... *
+>Cluster 319
+0	22aa, >peptide_1701... *
+>Cluster 320
+0	22aa, >peptide_1792... *
+>Cluster 321
+0	22aa, >peptide_1836... *
+>Cluster 322
+0	22aa, >peptide_1850... *
+>Cluster 323
+0	22aa, >peptide_1894... *
+>Cluster 324
+0	21aa, >peptide_36... *
+1	21aa, >peptide_1552... at 95.24%
+>Cluster 325
+0	21aa, >peptide_50... *
+1	21aa, >peptide_144... at 90.48%
+2	21aa, >peptide_440... at 85.71%
+3	21aa, >peptide_544... at 90.48%
+4	21aa, >peptide_835... at 95.24%
+5	21aa, >peptide_990... at 90.48%
+6	21aa, >peptide_1053... at 85.71%
+7	21aa, >peptide_1753... at 95.24%
+>Cluster 326
+0	21aa, >peptide_51... *
+>Cluster 327
+0	21aa, >peptide_108... *
+>Cluster 328
+0	21aa, >peptide_120... *
+1	21aa, >peptide_289... at 90.48%
+2	21aa, >peptide_1224... at 90.48%
+3	21aa, >peptide_1586... at 95.24%
+>Cluster 329
+0	21aa, >peptide_127... *
+1	21aa, >peptide_479... at 95.24%
+2	21aa, >peptide_1744... at 95.24%
+3	21aa, >peptide_1886... at 90.48%
+>Cluster 330
+0	21aa, >peptide_148... *
+>Cluster 331
+0	21aa, >peptide_183... *
+1	21aa, >peptide_788... at 95.24%
+2	21aa, >peptide_1025... at 90.48%
+>Cluster 332
+0	21aa, >peptide_185... *
+1	21aa, >peptide_244... at 95.24%
+2	21aa, >peptide_338... at 95.24%
+>Cluster 333
+0	21aa, >peptide_227... *
+>Cluster 334
+0	21aa, >peptide_262... *
+>Cluster 335
+0	21aa, >peptide_319... *
+>Cluster 336
+0	21aa, >peptide_340... *
+>Cluster 337
+0	21aa, >peptide_347... *
+>Cluster 338
+0	21aa, >peptide_373... *
+>Cluster 339
+0	21aa, >peptide_388... *
+>Cluster 340
+0	21aa, >peptide_435... *
+>Cluster 341
+0	21aa, >peptide_445... *
+>Cluster 342
+0	21aa, >peptide_461... *
+1	21aa, >peptide_1553... at 90.48%
+>Cluster 343
+0	21aa, >peptide_464... *
+>Cluster 344
+0	21aa, >peptide_516... *
+>Cluster 345
+0	21aa, >peptide_598... *
+>Cluster 346
+0	21aa, >peptide_786... *
+>Cluster 347
+0	21aa, >peptide_792... *
+>Cluster 348
+0	21aa, >peptide_808... *
+>Cluster 349
+0	21aa, >peptide_1147... *
+>Cluster 350
+0	21aa, >peptide_1159... *
+1	16aa, >peptide_1655... at 100.00%
+>Cluster 351
+0	21aa, >peptide_1188... *
+>Cluster 352
+0	21aa, >peptide_1192... *
+>Cluster 353
+0	21aa, >peptide_1310... *
+>Cluster 354
+0	21aa, >peptide_1368... *
+>Cluster 355
+0	21aa, >peptide_1413... *
+>Cluster 356
+0	21aa, >peptide_1512... *
+>Cluster 357
+0	21aa, >peptide_1568... *
+>Cluster 358
+0	21aa, >peptide_1619... *
+>Cluster 359
+0	21aa, >peptide_1794... *
+1	21aa, >peptide_1816... at 95.24%
+>Cluster 360
+0	16aa, >peptide_417... at 100.00%
+1	12aa, >peptide_475... at 100.00%
+2	17aa, >peptide_993... at 100.00%
+3	21aa, >peptide_1869... *
+>Cluster 361
+0	21aa, >peptide_1902... *
+>Cluster 362
+0	20aa, >peptide_2... *
+>Cluster 363
+0	20aa, >peptide_13... *
+>Cluster 364
+0	20aa, >peptide_21... *
+>Cluster 365
+0	20aa, >peptide_27... *
+>Cluster 366
+0	20aa, >peptide_29... *
+1	20aa, >peptide_668... at 90.00%
+2	20aa, >peptide_1328... at 95.00%
+3	20aa, >peptide_1597... at 95.00%
+>Cluster 367
+0	20aa, >peptide_40... *
+1	20aa, >peptide_964... at 85.00%
+2	20aa, >peptide_1520... at 95.00%
+>Cluster 368
+0	20aa, >peptide_72... *
+>Cluster 369
+0	20aa, >peptide_112... *
+>Cluster 370
+0	20aa, >peptide_156... *
+>Cluster 371
+0	20aa, >peptide_191... *
+>Cluster 372
+0	20aa, >peptide_208... *
+>Cluster 373
+0	20aa, >peptide_224... *
+>Cluster 374
+0	20aa, >peptide_236... *
+>Cluster 375
+0	20aa, >peptide_255... *
+>Cluster 376
+0	20aa, >peptide_258... *
+>Cluster 377
+0	20aa, >peptide_295... *
+>Cluster 378
+0	20aa, >peptide_315... *
+>Cluster 379
+0	20aa, >peptide_456... *
+1	20aa, >peptide_1740... at 85.00%
+>Cluster 380
+0	20aa, >peptide_480... *
+>Cluster 381
+0	20aa, >peptide_493... *
+>Cluster 382
+0	20aa, >peptide_505... *
+>Cluster 383
+0	20aa, >peptide_527... *
+>Cluster 384
+0	20aa, >peptide_530... *
+>Cluster 385
+0	20aa, >peptide_583... *
+>Cluster 386
+0	20aa, >peptide_603... *
+>Cluster 387
+0	20aa, >peptide_647... *
+>Cluster 388
+0	20aa, >peptide_660... *
+>Cluster 389
+0	20aa, >peptide_669... *
+>Cluster 390
+0	20aa, >peptide_714... *
+1	20aa, >peptide_1729... at 85.00%
+>Cluster 391
+0	20aa, >peptide_738... *
+>Cluster 392
+0	20aa, >peptide_776... *
+1	20aa, >peptide_1110... at 95.00%
+>Cluster 393
+0	20aa, >peptide_793... *
+>Cluster 394
+0	20aa, >peptide_796... *
+>Cluster 395
+0	20aa, >peptide_873... *
+1	20aa, >peptide_1526... at 95.00%
+>Cluster 396
+0	20aa, >peptide_903... *
+>Cluster 397
+0	20aa, >peptide_973... *
+>Cluster 398
+0	20aa, >peptide_976... *
+>Cluster 399
+0	20aa, >peptide_979... *
+1	20aa, >peptide_1366... at 95.00%
+>Cluster 400
+0	20aa, >peptide_997... *
+>Cluster 401
+0	20aa, >peptide_1048... *
+>Cluster 402
+0	20aa, >peptide_1144... *
+1	20aa, >peptide_1346... at 95.00%
+>Cluster 403
+0	20aa, >peptide_1148... *
+>Cluster 404
+0	20aa, >peptide_1156... *
+>Cluster 405
+0	20aa, >peptide_1166... *
+1	20aa, >peptide_1465... at 85.00%
+2	20aa, >peptide_1525... at 85.00%
+3	20aa, >peptide_1812... at 85.00%
+>Cluster 406
+0	20aa, >peptide_1177... *
+>Cluster 407
+0	20aa, >peptide_1305... *
+>Cluster 408
+0	20aa, >peptide_1378... *
+>Cluster 409
+0	20aa, >peptide_1380... *
+>Cluster 410
+0	20aa, >peptide_1390... *
+>Cluster 411
+0	20aa, >peptide_1424... *
+>Cluster 412
+0	20aa, >peptide_1583... *
+>Cluster 413
+0	20aa, >peptide_1610... *
+>Cluster 414
+0	20aa, >peptide_1651... *
+>Cluster 415
+0	20aa, >peptide_1675... *
+>Cluster 416
+0	20aa, >peptide_1698... *
+>Cluster 417
+0	20aa, >peptide_1726... *
+>Cluster 418
+0	20aa, >peptide_1766... *
+>Cluster 419
+0	20aa, >peptide_1806... *
+>Cluster 420
+0	20aa, >peptide_1843... *
+>Cluster 421
+0	20aa, >peptide_1853... *
+>Cluster 422
+0	20aa, >peptide_1858... *
+>Cluster 423
+0	20aa, >peptide_1880... *
+>Cluster 424
+0	19aa, >peptide_5... *
+>Cluster 425
+0	19aa, >peptide_49... *
+1	17aa, >peptide_478... at 100.00%
+>Cluster 426
+0	19aa, >peptide_57... *
+>Cluster 427
+0	19aa, >peptide_62... *
+>Cluster 428
+0	19aa, >peptide_64... *
+1	19aa, >peptide_539... at 94.74%
+>Cluster 429
+0	19aa, >peptide_172... *
+>Cluster 430
+0	19aa, >peptide_196... *
+>Cluster 431
+0	19aa, >peptide_249... *
+1	19aa, >peptide_854... at 89.47%
+2	19aa, >peptide_1663... at 94.74%
+>Cluster 432
+0	19aa, >peptide_280... *
+>Cluster 433
+0	19aa, >peptide_298... *
+1	19aa, >peptide_312... at 89.47%
+2	19aa, >peptide_1211... at 89.47%
+>Cluster 434
+0	19aa, >peptide_322... *
+1	19aa, >peptide_1517... at 94.74%
+>Cluster 435
+0	18aa, >peptide_385... at 94.44%
+1	19aa, >peptide_412... *
+2	19aa, >peptide_703... at 94.74%
+3	18aa, >peptide_824... at 100.00%
+>Cluster 436
+0	19aa, >peptide_420... *
+>Cluster 437
+0	19aa, >peptide_431... *
+>Cluster 438
+0	19aa, >peptide_453... *
+1	18aa, >peptide_1140... at 88.89%
+2	19aa, >peptide_1470... at 89.47%
+3	19aa, >peptide_1543... at 94.74%
+>Cluster 439
+0	19aa, >peptide_532... *
+1	19aa, >peptide_849... at 89.47%
+2	19aa, >peptide_1207... at 94.74%
+>Cluster 440
+0	19aa, >peptide_642... *
+>Cluster 441
+0	19aa, >peptide_654... *
+1	19aa, >peptide_909... at 89.47%
+>Cluster 442
+0	19aa, >peptide_663... *
+>Cluster 443
+0	19aa, >peptide_740... *
+>Cluster 444
+0	19aa, >peptide_777... *
+>Cluster 445
+0	19aa, >peptide_926... *
+>Cluster 446
+0	19aa, >peptide_947... *
+1	19aa, >peptide_1434... at 94.74%
+>Cluster 447
+0	19aa, >peptide_956... *
+>Cluster 448
+0	19aa, >peptide_996... *
+1	19aa, >peptide_1185... at 89.47%
+2	19aa, >peptide_1266... at 89.47%
+3	19aa, >peptide_1775... at 89.47%
+>Cluster 449
+0	19aa, >peptide_1011... *
+>Cluster 450
+0	19aa, >peptide_1172... *
+>Cluster 451
+0	19aa, >peptide_1203... *
+>Cluster 452
+0	19aa, >peptide_1282... *
+>Cluster 453
+0	19aa, >peptide_1299... *
+>Cluster 454
+0	19aa, >peptide_1431... *
+>Cluster 455
+0	19aa, >peptide_1440... *
+>Cluster 456
+0	19aa, >peptide_1530... *
+>Cluster 457
+0	19aa, >peptide_1593... *
+>Cluster 458
+0	19aa, >peptide_1672... *
+>Cluster 459
+0	19aa, >peptide_1679... *
+>Cluster 460
+0	13aa, >peptide_284... at 100.00%
+1	19aa, >peptide_1683... *
+>Cluster 461
+0	12aa, >peptide_66... at 91.67%
+1	14aa, >peptide_202... at 92.86%
+2	14aa, >peptide_342... at 85.71%
+3	14aa, >peptide_517... at 85.71%
+4	14aa, >peptide_591... at 85.71%
+5	12aa, >peptide_608... at 91.67%
+6	14aa, >peptide_1357... at 85.71%
+7	14aa, >peptide_1469... at 85.71%
+8	14aa, >peptide_1489... at 92.86%
+9	12aa, >peptide_1680... at 100.00%
+10	19aa, >peptide_1770... *
+>Cluster 462
+0	19aa, >peptide_1924... *
+>Cluster 463
+0	18aa, >peptide_14... *
+>Cluster 464
+0	18aa, >peptide_23... *
+>Cluster 465
+0	18aa, >peptide_28... *
+1	12aa, >peptide_743... at 91.67%
+>Cluster 466
+0	18aa, >peptide_30... *
+>Cluster 467
+0	18aa, >peptide_41... *
+>Cluster 468
+0	18aa, >peptide_47... *
+>Cluster 469
+0	18aa, >peptide_54... *
+1	18aa, >peptide_349... at 94.44%
+>Cluster 470
+0	18aa, >peptide_58... *
+1	18aa, >peptide_171... at 88.89%
+2	18aa, >peptide_868... at 88.89%
+3	18aa, >peptide_995... at 88.89%
+4	18aa, >peptide_1035... at 94.44%
+5	18aa, >peptide_1067... at 88.89%
+6	18aa, >peptide_1230... at 88.89%
+7	18aa, >peptide_1460... at 88.89%
+8	18aa, >peptide_1694... at 94.44%
+>Cluster 471
+0	18aa, >peptide_90... *
+1	18aa, >peptide_1316... at 88.89%
+>Cluster 472
+0	18aa, >peptide_132... *
+>Cluster 473
+0	18aa, >peptide_157... *
+1	18aa, >peptide_1205... at 94.44%
+>Cluster 474
+0	18aa, >peptide_167... *
+>Cluster 475
+0	18aa, >peptide_199... *
+1	18aa, >peptide_1513... at 88.89%
+2	18aa, >peptide_1641... at 94.44%
+>Cluster 476
+0	18aa, >peptide_214... *
+1	16aa, >peptide_520... at 87.50%
+2	16aa, >peptide_613... at 87.50%
+3	16aa, >peptide_632... at 87.50%
+4	16aa, >peptide_705... at 87.50%
+5	16aa, >peptide_1100... at 87.50%
+6	16aa, >peptide_1197... at 87.50%
+7	18aa, >peptide_1354... at 88.89%
+8	16aa, >peptide_1830... at 93.75%
+>Cluster 477
+0	18aa, >peptide_268... *
+1	18aa, >peptide_888... at 94.44%
+>Cluster 478
+0	18aa, >peptide_269... *
+>Cluster 479
+0	18aa, >peptide_274... *
+1	18aa, >peptide_540... at 94.44%
+>Cluster 480
+0	18aa, >peptide_296... *
+>Cluster 481
+0	18aa, >peptide_309... *
+1	18aa, >peptide_1065... at 94.44%
+2	18aa, >peptide_1897... at 88.89%
+>Cluster 482
+0	18aa, >peptide_316... *
+1	18aa, >peptide_365... at 94.44%
+2	18aa, >peptide_424... at 94.44%
+3	17aa, >peptide_444... at 94.12%
+4	18aa, >peptide_570... at 94.44%
+5	17aa, >peptide_1007... at 100.00%
+6	18aa, >peptide_1093... at 94.44%
+7	17aa, >peptide_1318... at 88.24%
+8	18aa, >peptide_1340... at 94.44%
+9	18aa, >peptide_1383... at 94.44%
+10	18aa, >peptide_1443... at 88.89%
+11	18aa, >peptide_1653... at 88.89%
+>Cluster 483
+0	18aa, >peptide_341... *
+1	18aa, >peptide_594... at 94.44%
+2	18aa, >peptide_1411... at 88.89%
+>Cluster 484
+0	18aa, >peptide_387... *
+1	18aa, >peptide_1863... at 94.44%
+>Cluster 485
+0	18aa, >peptide_401... *
+1	18aa, >peptide_429... at 94.44%
+2	18aa, >peptide_1072... at 94.44%
+3	18aa, >peptide_1255... at 94.44%
+4	18aa, >peptide_1804... at 94.44%
+>Cluster 486
+0	18aa, >peptide_405... *
+>Cluster 487
+0	18aa, >peptide_421... *
+1	18aa, >peptide_590... at 88.89%
+>Cluster 488
+0	18aa, >peptide_451... *
+>Cluster 489
+0	18aa, >peptide_562... *
+>Cluster 490
+0	18aa, >peptide_566... *
+>Cluster 491
+0	18aa, >peptide_578... *
+>Cluster 492
+0	18aa, >peptide_628... *
+>Cluster 493
+0	18aa, >peptide_651... *
+1	18aa, >peptide_719... at 94.44%
+2	18aa, >peptide_1285... at 94.44%
+3	18aa, >peptide_1472... at 88.89%
+4	18aa, >peptide_1551... at 88.89%
+5	18aa, >peptide_1780... at 94.44%
+>Cluster 494
+0	13aa, >peptide_67... at 100.00%
+1	13aa, >peptide_74... at 100.00%
+2	18aa, >peptide_673... *
+3	12aa, >peptide_989... at 100.00%
+4	12aa, >peptide_1130... at 100.00%
+5	14aa, >peptide_1917... at 100.00%
+>Cluster 495
+0	18aa, >peptide_698... *
+1	18aa, >peptide_1367... at 94.44%
+>Cluster 496
+0	18aa, >peptide_710... *
+>Cluster 497
+0	18aa, >peptide_732... *
+>Cluster 498
+0	18aa, >peptide_861... *
+>Cluster 499
+0	15aa, >peptide_779... at 93.33%
+1	18aa, >peptide_889... *
+>Cluster 500
+0	18aa, >peptide_927... *
+>Cluster 501
+0	18aa, >peptide_943... *
+1	11aa, >peptide_1099... at 90.91%
+2	17aa, >peptide_1228... at 100.00%
+3	18aa, >peptide_1247... at 94.44%
+4	18aa, >peptide_1348... at 94.44%
+5	18aa, >peptide_1781... at 94.44%
+>Cluster 502
+0	16aa, >peptide_60... at 93.75%
+1	18aa, >peptide_1050... *
+2	14aa, >peptide_1150... at 100.00%
+3	16aa, >peptide_1471... at 93.75%
+4	16aa, >peptide_1479... at 100.00%
+>Cluster 503
+0	18aa, >peptide_1052... *
+>Cluster 504
+0	18aa, >peptide_1056... *
+>Cluster 505
+0	18aa, >peptide_1063... *
+>Cluster 506
+0	18aa, >peptide_1129... *
+1	18aa, >peptide_1330... at 88.89%
+>Cluster 507
+0	18aa, >peptide_1168... *
+>Cluster 508
+0	18aa, >peptide_1250... *
+>Cluster 509
+0	18aa, >peptide_1281... *
+1	18aa, >peptide_1365... at 94.44%
+2	18aa, >peptide_1563... at 94.44%
+>Cluster 510
+0	18aa, >peptide_1313... *
+>Cluster 511
+0	18aa, >peptide_1327... *
+>Cluster 512
+0	18aa, >peptide_1349... *
+1	18aa, >peptide_1658... at 88.89%
+>Cluster 513
+0	12aa, >peptide_488... at 100.00%
+1	18aa, >peptide_1369... *
+2	12aa, >peptide_1714... at 91.67%
+>Cluster 514
+0	18aa, >peptide_1379... *
+>Cluster 515
+0	18aa, >peptide_1419... *
+>Cluster 516
+0	18aa, >peptide_1521... *
+>Cluster 517
+0	18aa, >peptide_1582... *
+>Cluster 518
+0	14aa, >peptide_358... at 100.00%
+1	18aa, >peptide_1596... *
+>Cluster 519
+0	13aa, >peptide_1133... at 92.31%
+1	18aa, >peptide_1620... *
+>Cluster 520
+0	18aa, >peptide_1686... *
+>Cluster 521
+0	18aa, >peptide_1742... *
+>Cluster 522
+0	18aa, >peptide_1758... *
+>Cluster 523
+0	18aa, >peptide_1808... *
+>Cluster 524
+0	18aa, >peptide_1831... *
+>Cluster 525
+0	18aa, >peptide_1835... *
+>Cluster 526
+0	18aa, >peptide_1913... *
+>Cluster 527
+0	17aa, >peptide_96... *
+>Cluster 528
+0	17aa, >peptide_142... *
+1	15aa, >peptide_674... at 93.33%
+2	17aa, >peptide_712... at 88.24%
+3	17aa, >peptide_739... at 94.12%
+4	17aa, >peptide_1126... at 88.24%
+5	17aa, >peptide_1174... at 94.12%
+6	17aa, >peptide_1385... at 94.12%
+>Cluster 529
+0	17aa, >peptide_155... *
+>Cluster 530
+0	17aa, >peptide_219... *
+>Cluster 531
+0	17aa, >peptide_253... *
+1	16aa, >peptide_1213... at 100.00%
+>Cluster 532
+0	17aa, >peptide_279... *
+>Cluster 533
+0	17aa, >peptide_282... *
+>Cluster 534
+0	17aa, >peptide_299... *
+1	17aa, >peptide_1128... at 94.12%
+>Cluster 535
+0	13aa, >peptide_291... at 92.31%
+1	17aa, >peptide_343... *
+2	17aa, >peptide_362... at 94.12%
+3	14aa, >peptide_510... at 100.00%
+4	15aa, >peptide_558... at 100.00%
+5	17aa, >peptide_620... at 88.24%
+6	15aa, >peptide_700... at 93.33%
+7	14aa, >peptide_974... at 92.86%
+8	17aa, >peptide_1095... at 94.12%
+9	13aa, >peptide_1364... at 100.00%
+10	16aa, >peptide_1844... at 93.75%
+11	16aa, >peptide_1855... at 100.00%
+>Cluster 536
+0	17aa, >peptide_391... *
+>Cluster 537
+0	17aa, >peptide_433... *
+>Cluster 538
+0	17aa, >peptide_467... *
+1	17aa, >peptide_1501... at 88.24%
+>Cluster 539
+0	17aa, >peptide_497... *
+>Cluster 540
+0	17aa, >peptide_537... *
+>Cluster 541
+0	17aa, >peptide_541... *
+1	15aa, >peptide_1085... at 86.67%
+>Cluster 542
+0	13aa, >peptide_194... at 100.00%
+1	14aa, >peptide_300... at 100.00%
+2	17aa, >peptide_593... *
+3	14aa, >peptide_1132... at 92.86%
+>Cluster 543
+0	17aa, >peptide_676... *
+>Cluster 544
+0	17aa, >peptide_803... *
+>Cluster 545
+0	17aa, >peptide_850... *
+>Cluster 546
+0	17aa, >peptide_853... *
+>Cluster 547
+0	17aa, >peptide_876... *
+>Cluster 548
+0	17aa, >peptide_895... *
+>Cluster 549
+0	17aa, >peptide_946... *
+>Cluster 550
+0	17aa, >peptide_982... *
+>Cluster 551
+0	17aa, >peptide_1073... *
+1	17aa, >peptide_1634... at 94.12%
+>Cluster 552
+0	17aa, >peptide_1142... *
+>Cluster 553
+0	17aa, >peptide_1155... *
+>Cluster 554
+0	17aa, >peptide_1163... *
+>Cluster 555
+0	17aa, >peptide_1238... *
+>Cluster 556
+0	17aa, >peptide_1301... *
+1	17aa, >peptide_1562... at 94.12%
+>Cluster 557
+0	17aa, >peptide_1324... *
+>Cluster 558
+0	17aa, >peptide_1441... *
+>Cluster 559
+0	17aa, >peptide_1446... *
+>Cluster 560
+0	17aa, >peptide_1580... *
+>Cluster 561
+0	17aa, >peptide_1678... *
+>Cluster 562
+0	17aa, >peptide_1725... *
+>Cluster 563
+0	17aa, >peptide_1829... *
+>Cluster 564
+0	16aa, >peptide_7... *
+1	16aa, >peptide_1478... at 93.75%
+>Cluster 565
+0	16aa, >peptide_17... *
+1	16aa, >peptide_125... at 93.75%
+2	16aa, >peptide_1371... at 93.75%
+>Cluster 566
+0	16aa, >peptide_59... *
+1	16aa, >peptide_361... at 93.75%
+2	16aa, >peptide_559... at 87.50%
+3	16aa, >peptide_858... at 87.50%
+4	16aa, >peptide_1535... at 93.75%
+5	16aa, >peptide_1805... at 93.75%
+>Cluster 567
+0	16aa, >peptide_87... *
+1	13aa, >peptide_1015... at 100.00%
+>Cluster 568
+0	16aa, >peptide_159... *
+1	16aa, >peptide_1047... at 87.50%
+2	16aa, >peptide_1270... at 93.75%
+3	16aa, >peptide_1638... at 93.75%
+>Cluster 569
+0	16aa, >peptide_166... *
+>Cluster 570
+0	16aa, >peptide_174... *
+1	13aa, >peptide_1457... at 100.00%
+>Cluster 571
+0	16aa, >peptide_184... *
+1	16aa, >peptide_582... at 93.75%
+>Cluster 572
+0	16aa, >peptide_251... *
+1	16aa, >peptide_380... at 87.50%
+2	16aa, >peptide_724... at 93.75%
+3	16aa, >peptide_1016... at 87.50%
+4	16aa, >peptide_1069... at 93.75%
+5	16aa, >peptide_1624... at 93.75%
+6	16aa, >peptide_1859... at 93.75%
+>Cluster 573
+0	16aa, >peptide_254... *
+1	16aa, >peptide_1137... at 93.75%
+2	16aa, >peptide_1178... at 87.50%
+>Cluster 574
+0	16aa, >peptide_273... *
+1	16aa, >peptide_1637... at 93.75%
+>Cluster 575
+0	16aa, >peptide_301... *
+1	16aa, >peptide_1027... at 93.75%
+2	16aa, >peptide_1564... at 87.50%
+3	16aa, >peptide_1737... at 87.50%
+>Cluster 576
+0	16aa, >peptide_307... *
+>Cluster 577
+0	16aa, >peptide_314... *
+>Cluster 578
+0	16aa, >peptide_318... *
+1	16aa, >peptide_1910... at 93.75%
+>Cluster 579
+0	16aa, >peptide_334... *
+1	16aa, >peptide_1921... at 87.50%
+>Cluster 580
+0	16aa, >peptide_335... *
+1	13aa, >peptide_815... at 100.00%
+>Cluster 581
+0	15aa, >peptide_257... at 93.33%
+1	16aa, >peptide_396... *
+2	15aa, >peptide_1312... at 93.33%
+3	12aa, >peptide_1556... at 91.67%
+4	15aa, >peptide_1570... at 86.67%
+5	12aa, >peptide_1802... at 100.00%
+>Cluster 582
+0	16aa, >peptide_437... *
+>Cluster 583
+0	16aa, >peptide_442... *
+1	16aa, >peptide_764... at 93.75%
+2	16aa, >peptide_1278... at 87.50%
+3	16aa, >peptide_1433... at 93.75%
+>Cluster 584
+0	16aa, >peptide_524... *
+>Cluster 585
+0	16aa, >peptide_525... *
+1	16aa, >peptide_1400... at 93.75%
+2	16aa, >peptide_1706... at 93.75%
+3	16aa, >peptide_1761... at 93.75%
+4	16aa, >peptide_1817... at 93.75%
+>Cluster 586
+0	16aa, >peptide_546... *
+>Cluster 587
+0	16aa, >peptide_560... *
+1	16aa, >peptide_657... at 87.50%
+2	16aa, >peptide_1459... at 93.75%
+>Cluster 588
+0	16aa, >peptide_619... *
+>Cluster 589
+0	16aa, >peptide_631... *
+>Cluster 590
+0	16aa, >peptide_643... *
+>Cluster 591
+0	16aa, >peptide_681... *
+>Cluster 592
+0	16aa, >peptide_685... *
+1	16aa, >peptide_775... at 93.75%
+2	16aa, >peptide_1757... at 93.75%
+>Cluster 593
+0	16aa, >peptide_692... *
+1	16aa, >peptide_1042... at 93.75%
+2	16aa, >peptide_1389... at 87.50%
+>Cluster 594
+0	16aa, >peptide_697... *
+>Cluster 595
+0	16aa, >peptide_751... *
+1	16aa, >peptide_1444... at 93.75%
+>Cluster 596
+0	16aa, >peptide_809... *
+>Cluster 597
+0	16aa, >peptide_817... *
+>Cluster 598
+0	16aa, >peptide_822... *
+1	16aa, >peptide_928... at 87.50%
+2	16aa, >peptide_1613... at 87.50%
+3	16aa, >peptide_1798... at 87.50%
+>Cluster 599
+0	16aa, >peptide_843... *
+>Cluster 600
+0	16aa, >peptide_863... *
+>Cluster 601
+0	16aa, >peptide_877... *
+1	16aa, >peptide_944... at 93.75%
+>Cluster 602
+0	16aa, >peptide_954... *
+>Cluster 603
+0	16aa, >peptide_1008... *
+>Cluster 604
+0	12aa, >peptide_1009... at 100.00%
+1	16aa, >peptide_1261... *
+>Cluster 605
+0	16aa, >peptide_1287... *
+1	12aa, >peptide_1456... at 100.00%
+>Cluster 606
+0	16aa, >peptide_1288... *
+1	16aa, >peptide_1342... at 93.75%
+>Cluster 607
+0	16aa, >peptide_1358... *
+>Cluster 608
+0	16aa, >peptide_1409... *
+>Cluster 609
+0	16aa, >peptide_1420... *
+>Cluster 610
+0	16aa, >peptide_1458... *
+1	16aa, >peptide_1885... at 93.75%
+>Cluster 611
+0	15aa, >peptide_76... at 100.00%
+1	15aa, >peptide_124... at 93.33%
+2	15aa, >peptide_252... at 93.33%
+3	16aa, >peptide_1467... *
+4	15aa, >peptide_1579... at 93.33%
+5	15aa, >peptide_1777... at 93.33%
+6	15aa, >peptide_1868... at 86.67%
+>Cluster 612
+0	16aa, >peptide_1542... *
+>Cluster 613
+0	16aa, >peptide_1585... *
+>Cluster 614
+0	16aa, >peptide_1649... *
+>Cluster 615
+0	16aa, >peptide_1738... *
+>Cluster 616
+0	16aa, >peptide_1784... *
+>Cluster 617
+0	15aa, >peptide_109... *
+1	15aa, >peptide_1038... at 93.33%
+>Cluster 618
+0	15aa, >peptide_134... *
+1	15aa, >peptide_1909... at 86.67%
+>Cluster 619
+0	15aa, >peptide_201... *
+1	15aa, >peptide_329... at 93.33%
+2	15aa, >peptide_1359... at 93.33%
+>Cluster 620
+0	15aa, >peptide_265... *
+>Cluster 621
+0	15aa, >peptide_278... *
+>Cluster 622
+0	15aa, >peptide_281... *
+1	12aa, >peptide_1731... at 91.67%
+>Cluster 623
+0	15aa, >peptide_339... *
+>Cluster 624
+0	15aa, >peptide_344... *
+>Cluster 625
+0	15aa, >peptide_443... *
+1	15aa, >peptide_826... at 93.33%
+2	15aa, >peptide_1382... at 93.33%
+3	15aa, >peptide_1665... at 93.33%
+>Cluster 626
+0	15aa, >peptide_503... *
+1	15aa, >peptide_1252... at 93.33%
+2	15aa, >peptide_1547... at 93.33%
+>Cluster 627
+0	15aa, >peptide_507... *
+1	15aa, >peptide_1036... at 93.33%
+>Cluster 628
+0	15aa, >peptide_713... *
+>Cluster 629
+0	15aa, >peptide_717... *
+1	15aa, >peptide_1179... at 93.33%
+2	15aa, >peptide_1845... at 86.67%
+>Cluster 630
+0	15aa, >peptide_733... *
+>Cluster 631
+0	15aa, >peptide_847... *
+1	15aa, >peptide_981... at 93.33%
+>Cluster 632
+0	13aa, >peptide_604... at 100.00%
+1	15aa, >peptide_848... *
+2	11aa, >peptide_1180... at 90.91%
+3	15aa, >peptide_1898... at 86.67%
+>Cluster 633
+0	15aa, >peptide_871... *
+1	15aa, >peptide_1121... at 93.33%
+>Cluster 634
+0	15aa, >peptide_886... *
+>Cluster 635
+0	12aa, >peptide_154... at 100.00%
+1	15aa, >peptide_910... *
+>Cluster 636
+0	15aa, >peptide_987... *
+>Cluster 637
+0	15aa, >peptide_1227... *
+>Cluster 638
+0	15aa, >peptide_1254... *
+>Cluster 639
+0	15aa, >peptide_1276... *
+>Cluster 640
+0	15aa, >peptide_1352... *
+>Cluster 641
+0	15aa, >peptide_1355... *
+>Cluster 642
+0	15aa, >peptide_1499... *
+>Cluster 643
+0	15aa, >peptide_1554... *
+>Cluster 644
+0	15aa, >peptide_1608... *
+>Cluster 645
+0	15aa, >peptide_1631... *
+>Cluster 646
+0	15aa, >peptide_1647... *
+>Cluster 647
+0	13aa, >peptide_1090... at 100.00%
+1	15aa, >peptide_1674... *
+>Cluster 648
+0	13aa, >peptide_1004... at 100.00%
+1	15aa, >peptide_1720... *
+>Cluster 649
+0	15aa, >peptide_1783... *
+>Cluster 650
+0	15aa, >peptide_1814... *
+>Cluster 651
+0	14aa, >peptide_20... *
+1	14aa, >peptide_1226... at 92.86%
+>Cluster 652
+0	14aa, >peptide_48... *
+1	14aa, >peptide_52... at 85.71%
+2	14aa, >peptide_158... at 85.71%
+3	14aa, >peptide_639... at 85.71%
+4	14aa, >peptide_1051... at 85.71%
+5	14aa, >peptide_1097... at 85.71%
+6	14aa, >peptide_1643... at 85.71%
+7	14aa, >peptide_1774... at 92.86%
+8	14aa, >peptide_1903... at 92.86%
+>Cluster 653
+0	14aa, >peptide_92... *
+>Cluster 654
+0	14aa, >peptide_170... *
+1	14aa, >peptide_228... at 92.86%
+2	14aa, >peptide_899... at 85.71%
+3	14aa, >peptide_1544... at 85.71%
+>Cluster 655
+0	14aa, >peptide_175... *
+1	13aa, >peptide_180... at 92.31%
+>Cluster 656
+0	14aa, >peptide_195... *
+1	14aa, >peptide_1635... at 92.86%
+>Cluster 657
+0	14aa, >peptide_293... *
+>Cluster 658
+0	14aa, >peptide_327... *
+1	14aa, >peptide_1049... at 92.86%
+>Cluster 659
+0	14aa, >peptide_354... *
+>Cluster 660
+0	14aa, >peptide_363... *
+>Cluster 661
+0	14aa, >peptide_381... *
+1	14aa, >peptide_729... at 92.86%
+>Cluster 662
+0	14aa, >peptide_397... *
+>Cluster 663
+0	14aa, >peptide_410... *
+1	14aa, >peptide_452... at 92.86%
+>Cluster 664
+0	14aa, >peptide_411... *
+>Cluster 665
+0	14aa, >peptide_450... *
+>Cluster 666
+0	14aa, >peptide_472... *
+1	14aa, >peptide_869... at 92.86%
+>Cluster 667
+0	14aa, >peptide_477... *
+1	14aa, >peptide_624... at 92.86%
+2	14aa, >peptide_838... at 85.71%
+>Cluster 668
+0	14aa, >peptide_486... *
+1	14aa, >peptide_859... at 85.71%
+2	14aa, >peptide_1351... at 85.71%
+3	14aa, >peptide_1484... at 92.86%
+>Cluster 669
+0	14aa, >peptide_501... *
+>Cluster 670
+0	14aa, >peptide_512... *
+1	14aa, >peptide_1339... at 85.71%
+2	14aa, >peptide_1468... at 85.71%
+>Cluster 671
+0	14aa, >peptide_575... *
+>Cluster 672
+0	14aa, >peptide_605... *
+>Cluster 673
+0	14aa, >peptide_618... *
+1	14aa, >peptide_1309... at 92.86%
+>Cluster 674
+0	14aa, >peptide_626... *
+>Cluster 675
+0	14aa, >peptide_661... *
+1	14aa, >peptide_1376... at 92.86%
+2	14aa, >peptide_1545... at 92.86%
+>Cluster 676
+0	14aa, >peptide_684... *
+>Cluster 677
+0	13aa, >peptide_595... at 92.31%
+1	14aa, >peptide_704... *
+2	13aa, >peptide_1918... at 100.00%
+>Cluster 678
+0	14aa, >peptide_755... *
+>Cluster 679
+0	14aa, >peptide_800... *
+>Cluster 680
+0	14aa, >peptide_879... *
+>Cluster 681
+0	14aa, >peptide_880... *
+>Cluster 682
+0	14aa, >peptide_890... *
+1	14aa, >peptide_1222... at 85.71%
+>Cluster 683
+0	14aa, >peptide_912... *
+1	14aa, >peptide_1878... at 92.86%
+>Cluster 684
+0	14aa, >peptide_923... *
+1	14aa, >peptide_1724... at 92.86%
+2	14aa, >peptide_1893... at 85.71%
+>Cluster 685
+0	14aa, >peptide_940... *
+1	14aa, >peptide_1196... at 92.86%
+>Cluster 686
+0	14aa, >peptide_1057... *
+>Cluster 687
+0	14aa, >peptide_1081... *
+>Cluster 688
+0	14aa, >peptide_1108... *
+>Cluster 689
+0	14aa, >peptide_1123... *
+>Cluster 690
+0	14aa, >peptide_1149... *
+>Cluster 691
+0	14aa, >peptide_1169... *
+>Cluster 692
+0	14aa, >peptide_1306... *
+>Cluster 693
+0	14aa, >peptide_1308... *
+>Cluster 694
+0	14aa, >peptide_1325... *
+>Cluster 695
+0	14aa, >peptide_1370... *
+>Cluster 696
+0	14aa, >peptide_1396... *
+>Cluster 697
+0	14aa, >peptide_1410... *
+>Cluster 698
+0	14aa, >peptide_1523... *
+>Cluster 699
+0	14aa, >peptide_1566... *
+>Cluster 700
+0	14aa, >peptide_1591... *
+>Cluster 701
+0	14aa, >peptide_1604... *
+>Cluster 702
+0	14aa, >peptide_1657... *
+>Cluster 703
+0	14aa, >peptide_1667... *
+>Cluster 704
+0	14aa, >peptide_1682... *
+>Cluster 705
+0	14aa, >peptide_1727... *
+>Cluster 706
+0	14aa, >peptide_1736... *
+>Cluster 707
+0	14aa, >peptide_1839... *
+>Cluster 708
+0	14aa, >peptide_1871... *
+>Cluster 709
+0	14aa, >peptide_1883... *
+>Cluster 710
+0	14aa, >peptide_1912... *
+>Cluster 711
+0	13aa, >peptide_8... *
+>Cluster 712
+0	13aa, >peptide_11... *
+>Cluster 713
+0	13aa, >peptide_12... *
+1	13aa, >peptide_297... at 92.31%
+2	13aa, >peptide_966... at 92.31%
+>Cluster 714
+0	13aa, >peptide_24... *
+>Cluster 715
+0	13aa, >peptide_25... *
+>Cluster 716
+0	13aa, >peptide_37... *
+1	13aa, >peptide_1337... at 92.31%
+>Cluster 717
+0	13aa, >peptide_38... *
+>Cluster 718
+0	13aa, >peptide_43... *
+>Cluster 719
+0	13aa, >peptide_69... *
+>Cluster 720
+0	13aa, >peptide_73... *
+>Cluster 721
+0	13aa, >peptide_75... *
+>Cluster 722
+0	13aa, >peptide_80... *
+>Cluster 723
+0	13aa, >peptide_82... *
+1	13aa, >peptide_336... at 92.31%
+2	13aa, >peptide_1482... at 92.31%
+3	13aa, >peptide_1529... at 92.31%
+>Cluster 724
+0	13aa, >peptide_99... *
+>Cluster 725
+0	13aa, >peptide_114... *
+>Cluster 726
+0	13aa, >peptide_116... *
+1	13aa, >peptide_439... at 92.31%
+2	13aa, >peptide_1001... at 92.31%
+>Cluster 727
+0	13aa, >peptide_145... *
+1	13aa, >peptide_1401... at 92.31%
+>Cluster 728
+0	13aa, >peptide_149... *
+1	13aa, >peptide_1532... at 92.31%
+2	12aa, >peptide_1840... at 100.00%
+>Cluster 729
+0	13aa, >peptide_150... *
+>Cluster 730
+0	13aa, >peptide_160... *
+>Cluster 731
+0	13aa, >peptide_165... *
+1	11aa, >peptide_1627... at 90.91%
+>Cluster 732
+0	13aa, >peptide_168... *
+>Cluster 733
+0	13aa, >peptide_169... *
+>Cluster 734
+0	13aa, >peptide_181... *
+1	13aa, >peptide_1062... at 92.31%
+2	13aa, >peptide_1430... at 92.31%
+3	13aa, >peptide_1435... at 92.31%
+4	13aa, >peptide_1884... at 92.31%
+>Cluster 735
+0	13aa, >peptide_190... *
+>Cluster 736
+0	13aa, >peptide_200... *
+>Cluster 737
+0	13aa, >peptide_203... *
+1	13aa, >peptide_1825... at 92.31%
+>Cluster 738
+0	13aa, >peptide_207... *
+>Cluster 739
+0	13aa, >peptide_212... *
+1	13aa, >peptide_320... at 92.31%
+>Cluster 740
+0	13aa, >peptide_213... *
+>Cluster 741
+0	13aa, >peptide_221... *
+>Cluster 742
+0	13aa, >peptide_225... *
+1	13aa, >peptide_1598... at 92.31%
+>Cluster 743
+0	13aa, >peptide_237... *
+>Cluster 744
+0	13aa, >peptide_241... *
+1	13aa, >peptide_711... at 92.31%
+>Cluster 745
+0	13aa, >peptide_243... *
+>Cluster 746
+0	13aa, >peptide_248... *
+>Cluster 747
+0	13aa, >peptide_250... *
+>Cluster 748
+0	13aa, >peptide_266... *
+>Cluster 749
+0	13aa, >peptide_271... *
+1	13aa, >peptide_1922... at 92.31%
+>Cluster 750
+0	13aa, >peptide_272... *
+>Cluster 751
+0	13aa, >peptide_276... *
+1	13aa, >peptide_1703... at 92.31%
+>Cluster 752
+0	13aa, >peptide_287... *
+1	13aa, >peptide_1116... at 92.31%
+2	13aa, >peptide_1857... at 92.31%
+>Cluster 753
+0	13aa, >peptide_288... *
+1	13aa, >peptide_1182... at 92.31%
+>Cluster 754
+0	13aa, >peptide_306... *
+>Cluster 755
+0	13aa, >peptide_328... *
+1	13aa, >peptide_936... at 92.31%
+2	13aa, >peptide_1143... at 92.31%
+>Cluster 756
+0	13aa, >peptide_330... *
+1	13aa, >peptide_449... at 92.31%
+2	13aa, >peptide_761... at 92.31%
+3	13aa, >peptide_1076... at 92.31%
+4	13aa, >peptide_1240... at 92.31%
+>Cluster 757
+0	13aa, >peptide_351... *
+>Cluster 758
+0	13aa, >peptide_357... *
+>Cluster 759
+0	13aa, >peptide_370... *
+1	13aa, >peptide_662... at 92.31%
+>Cluster 760
+0	13aa, >peptide_374... *
+>Cluster 761
+0	13aa, >peptide_377... *
+>Cluster 762
+0	13aa, >peptide_389... *
+>Cluster 763
+0	13aa, >peptide_390... *
+>Cluster 764
+0	13aa, >peptide_392... *
+>Cluster 765
+0	13aa, >peptide_399... *
+>Cluster 766
+0	13aa, >peptide_428... *
+>Cluster 767
+0	13aa, >peptide_455... *
+1	13aa, >peptide_1515... at 92.31%
+>Cluster 768
+0	13aa, >peptide_465... *
+>Cluster 769
+0	13aa, >peptide_474... *
+>Cluster 770
+0	13aa, >peptide_476... *
+>Cluster 771
+0	13aa, >peptide_487... *
+>Cluster 772
+0	13aa, >peptide_500... *
+>Cluster 773
+0	13aa, >peptide_531... *
+1	13aa, >peptide_665... at 92.31%
+>Cluster 774
+0	13aa, >peptide_534... *
+>Cluster 775
+0	13aa, >peptide_547... *
+1	13aa, >peptide_1827... at 92.31%
+>Cluster 776
+0	13aa, >peptide_549... *
+>Cluster 777
+0	13aa, >peptide_554... *
+1	13aa, >peptide_1161... at 92.31%
+>Cluster 778
+0	13aa, >peptide_561... *
+>Cluster 779
+0	13aa, >peptide_564... *
+>Cluster 780
+0	13aa, >peptide_576... *
+>Cluster 781
+0	13aa, >peptide_601... *
+>Cluster 782
+0	13aa, >peptide_606... *
+1	13aa, >peptide_1194... at 92.31%
+>Cluster 783
+0	13aa, >peptide_623... *
+1	13aa, >peptide_1874... at 92.31%
+>Cluster 784
+0	13aa, >peptide_629... *
+>Cluster 785
+0	13aa, >peptide_630... *
+>Cluster 786
+0	13aa, >peptide_634... *
+>Cluster 787
+0	11aa, >peptide_473... at 90.91%
+1	13aa, >peptide_637... *
+2	13aa, >peptide_840... at 92.31%
+>Cluster 788
+0	13aa, >peptide_644... *
+1	13aa, >peptide_1167... at 92.31%
+>Cluster 789
+0	12aa, >peptide_33... at 100.00%
+1	13aa, >peptide_645... *
+>Cluster 790
+0	13aa, >peptide_666... *
+>Cluster 791
+0	13aa, >peptide_670... *
+1	13aa, >peptide_691... at 92.31%
+2	13aa, >peptide_1569... at 92.31%
+>Cluster 792
+0	13aa, >peptide_709... *
+>Cluster 793
+0	13aa, >peptide_726... *
+>Cluster 794
+0	13aa, >peptide_730... *
+>Cluster 795
+0	13aa, >peptide_737... *
+>Cluster 796
+0	13aa, >peptide_744... *
+>Cluster 797
+0	13aa, >peptide_745... *
+>Cluster 798
+0	13aa, >peptide_747... *
+>Cluster 799
+0	13aa, >peptide_750... *
+>Cluster 800
+0	13aa, >peptide_770... *
+>Cluster 801
+0	13aa, >peptide_778... *
+>Cluster 802
+0	13aa, >peptide_780... *
+>Cluster 803
+0	13aa, >peptide_785... *
+>Cluster 804
+0	13aa, >peptide_797... *
+1	13aa, >peptide_1587... at 92.31%
+>Cluster 805
+0	13aa, >peptide_801... *
+1	13aa, >peptide_1216... at 92.31%
+>Cluster 806
+0	13aa, >peptide_806... *
+>Cluster 807
+0	13aa, >peptide_813... *
+>Cluster 808
+0	13aa, >peptide_819... *
+1	13aa, >peptide_1524... at 92.31%
+>Cluster 809
+0	13aa, >peptide_825... *
+>Cluster 810
+0	13aa, >peptide_837... *
+>Cluster 811
+0	13aa, >peptide_842... *
+>Cluster 812
+0	13aa, >peptide_852... *
+>Cluster 813
+0	13aa, >peptide_862... *
+>Cluster 814
+0	13aa, >peptide_882... *
+>Cluster 815
+0	13aa, >peptide_908... *
+>Cluster 816
+0	13aa, >peptide_917... *
+1	13aa, >peptide_1302... at 92.31%
+2	13aa, >peptide_1690... at 92.31%
+>Cluster 817
+0	13aa, >peptide_930... *
+>Cluster 818
+0	13aa, >peptide_942... *
+>Cluster 819
+0	13aa, >peptide_957... *
+>Cluster 820
+0	13aa, >peptide_960... *
+>Cluster 821
+0	13aa, >peptide_992... *
+>Cluster 822
+0	13aa, >peptide_1002... *
+>Cluster 823
+0	13aa, >peptide_1014... *
+>Cluster 824
+0	13aa, >peptide_1019... *
+>Cluster 825
+0	13aa, >peptide_1020... *
+>Cluster 826
+0	13aa, >peptide_1026... *
+>Cluster 827
+0	13aa, >peptide_1033... *
+>Cluster 828
+0	13aa, >peptide_1054... *
+>Cluster 829
+0	13aa, >peptide_1104... *
+1	12aa, >peptide_1404... at 100.00%
+>Cluster 830
+0	13aa, >peptide_1109... *
+>Cluster 831
+0	13aa, >peptide_1120... *
+>Cluster 832
+0	13aa, >peptide_1124... *
+>Cluster 833
+0	12aa, >peptide_210... at 91.67%
+1	13aa, >peptide_1131... *
+2	13aa, >peptide_1386... at 92.31%
+3	13aa, >peptide_1567... at 92.31%
+>Cluster 834
+0	13aa, >peptide_1134... *
+>Cluster 835
+0	13aa, >peptide_1152... *
+>Cluster 836
+0	13aa, >peptide_1153... *
+>Cluster 837
+0	13aa, >peptide_1158... *
+>Cluster 838
+0	13aa, >peptide_1160... *
+>Cluster 839
+0	13aa, >peptide_1164... *
+1	13aa, >peptide_1628... at 92.31%
+>Cluster 840
+0	13aa, >peptide_1204... *
+>Cluster 841
+0	13aa, >peptide_1209... *
+1	13aa, >peptide_1251... at 92.31%
+>Cluster 842
+0	13aa, >peptide_1217... *
+>Cluster 843
+0	13aa, >peptide_1219... *
+>Cluster 844
+0	13aa, >peptide_1241... *
+>Cluster 845
+0	12aa, >peptide_953... at 91.67%
+1	13aa, >peptide_1262... *
+>Cluster 846
+0	13aa, >peptide_1269... *
+>Cluster 847
+0	13aa, >peptide_1298... *
+>Cluster 848
+0	13aa, >peptide_1307... *
+>Cluster 849
+0	13aa, >peptide_1314... *
+>Cluster 850
+0	13aa, >peptide_1334... *
+>Cluster 851
+0	13aa, >peptide_1341... *
+>Cluster 852
+0	13aa, >peptide_1356... *
+>Cluster 853
+0	13aa, >peptide_1377... *
+>Cluster 854
+0	13aa, >peptide_1391... *
+>Cluster 855
+0	13aa, >peptide_1397... *
+>Cluster 856
+0	13aa, >peptide_1399... *
+>Cluster 857
+0	13aa, >peptide_1442... *
+>Cluster 858
+0	13aa, >peptide_1447... *
+>Cluster 859
+0	13aa, >peptide_1450... *
+>Cluster 860
+0	13aa, >peptide_1475... *
+>Cluster 861
+0	13aa, >peptide_1481... *
+>Cluster 862
+0	13aa, >peptide_1485... *
+>Cluster 863
+0	13aa, >peptide_1503... *
+>Cluster 864
+0	13aa, >peptide_1504... *
+>Cluster 865
+0	13aa, >peptide_1508... *
+>Cluster 866
+0	13aa, >peptide_1536... *
+>Cluster 867
+0	13aa, >peptide_1540... *
+>Cluster 868
+0	13aa, >peptide_1550... *
+>Cluster 869
+0	13aa, >peptide_1572... *
+>Cluster 870
+0	13aa, >peptide_1584... *
+>Cluster 871
+0	13aa, >peptide_1612... *
+>Cluster 872
+0	13aa, >peptide_1616... *
+>Cluster 873
+0	13aa, >peptide_1656... *
+>Cluster 874
+0	13aa, >peptide_1659... *
+>Cluster 875
+0	13aa, >peptide_1660... *
+>Cluster 876
+0	13aa, >peptide_1661... *
+>Cluster 877
+0	13aa, >peptide_1662... *
+>Cluster 878
+0	13aa, >peptide_1670... *
+>Cluster 879
+0	13aa, >peptide_1693... *
+>Cluster 880
+0	13aa, >peptide_1699... *
+1	13aa, >peptide_1856... at 92.31%
+>Cluster 881
+0	13aa, >peptide_1702... *
+>Cluster 882
+0	13aa, >peptide_1734... *
+>Cluster 883
+0	13aa, >peptide_1741... *
+>Cluster 884
+0	13aa, >peptide_1746... *
+>Cluster 885
+0	13aa, >peptide_1759... *
+>Cluster 886
+0	13aa, >peptide_1764... *
+>Cluster 887
+0	13aa, >peptide_1765... *
+>Cluster 888
+0	13aa, >peptide_1772... *
+>Cluster 889
+0	13aa, >peptide_1786... *
+>Cluster 890
+0	13aa, >peptide_1801... *
+>Cluster 891
+0	13aa, >peptide_1803... *
+>Cluster 892
+0	13aa, >peptide_1807... *
+>Cluster 893
+0	13aa, >peptide_1815... *
+>Cluster 894
+0	13aa, >peptide_1837... *
+>Cluster 895
+0	13aa, >peptide_1846... *
+>Cluster 896
+0	13aa, >peptide_1847... *
+>Cluster 897
+0	13aa, >peptide_1854... *
+>Cluster 898
+0	13aa, >peptide_1872... *
+>Cluster 899
+0	13aa, >peptide_1875... *
+>Cluster 900
+0	13aa, >peptide_1882... *
+>Cluster 901
+0	13aa, >peptide_1895... *
+>Cluster 902
+0	13aa, >peptide_1904... *
+>Cluster 903
+0	12aa, >peptide_4... *
+>Cluster 904
+0	12aa, >peptide_56... *
+1	12aa, >peptide_313... at 91.67%
+>Cluster 905
+0	12aa, >peptide_102... *
+>Cluster 906
+0	12aa, >peptide_103... *
+1	12aa, >peptide_463... at 91.67%
+2	11aa, >peptide_900... at 90.91%
+3	12aa, >peptide_1113... at 91.67%
+4	12aa, >peptide_1748... at 91.67%
+>Cluster 907
+0	12aa, >peptide_128... *
+1	12aa, >peptide_911... at 91.67%
+>Cluster 908
+0	12aa, >peptide_129... *
+>Cluster 909
+0	12aa, >peptide_137... *
+>Cluster 910
+0	11aa, >peptide_15... at 90.91%
+1	12aa, >peptide_187... *
+2	12aa, >peptide_627... at 91.67%
+3	12aa, >peptide_794... at 91.67%
+4	12aa, >peptide_1018... at 91.67%
+>Cluster 911
+0	12aa, >peptide_206... *
+1	12aa, >peptide_1496... at 91.67%
+2	12aa, >peptide_1519... at 91.67%
+3	12aa, >peptide_1849... at 91.67%
+>Cluster 912
+0	12aa, >peptide_217... *
+>Cluster 913
+0	12aa, >peptide_238... *
+>Cluster 914
+0	12aa, >peptide_245... *
+>Cluster 915
+0	12aa, >peptide_323... *
+1	12aa, >peptide_1277... at 91.67%
+>Cluster 916
+0	12aa, >peptide_332... *
+>Cluster 917
+0	12aa, >peptide_345... *
+1	11aa, >peptide_430... at 100.00%
+2	12aa, >peptide_614... at 91.67%
+3	12aa, >peptide_821... at 91.67%
+4	12aa, >peptide_867... at 91.67%
+5	12aa, >peptide_1291... at 91.67%
+>Cluster 918
+0	12aa, >peptide_348... *
+>Cluster 919
+0	12aa, >peptide_356... *
+>Cluster 920
+0	12aa, >peptide_360... *
+>Cluster 921
+0	12aa, >peptide_367... *
+1	12aa, >peptide_596... at 91.67%
+2	12aa, >peptide_1106... at 91.67%
+>Cluster 922
+0	12aa, >peptide_376... *
+>Cluster 923
+0	12aa, >peptide_398... *
+1	12aa, >peptide_983... at 91.67%
+>Cluster 924
+0	12aa, >peptide_409... *
+>Cluster 925
+0	12aa, >peptide_414... *
+>Cluster 926
+0	12aa, >peptide_436... *
+>Cluster 927
+0	12aa, >peptide_457... *
+1	12aa, >peptide_679... at 91.67%
+2	12aa, >peptide_749... at 91.67%
+3	12aa, >peptide_772... at 91.67%
+4	12aa, >peptide_961... at 91.67%
+5	12aa, >peptide_1010... at 91.67%
+6	12aa, >peptide_1231... at 91.67%
+7	12aa, >peptide_1732... at 91.67%
+>Cluster 928
+0	12aa, >peptide_489... *
+1	12aa, >peptide_1245... at 91.67%
+2	12aa, >peptide_1684... at 91.67%
+>Cluster 929
+0	12aa, >peptide_641... *
+>Cluster 930
+0	12aa, >peptide_686... *
+>Cluster 931
+0	12aa, >peptide_688... *
+>Cluster 932
+0	12aa, >peptide_725... *
+1	12aa, >peptide_1225... at 91.67%
+>Cluster 933
+0	12aa, >peptide_728... *
+>Cluster 934
+0	12aa, >peptide_735... *
+>Cluster 935
+0	12aa, >peptide_805... *
+>Cluster 936
+0	12aa, >peptide_844... *
+>Cluster 937
+0	12aa, >peptide_857... *
+>Cluster 938
+0	12aa, >peptide_860... *
+>Cluster 939
+0	12aa, >peptide_883... *
+>Cluster 940
+0	12aa, >peptide_885... *
+1	12aa, >peptide_1494... at 91.67%
+>Cluster 941
+0	12aa, >peptide_892... *
+1	12aa, >peptide_1712... at 91.67%
+>Cluster 942
+0	12aa, >peptide_902... *
+1	12aa, >peptide_1320... at 91.67%
+>Cluster 943
+0	12aa, >peptide_925... *
+>Cluster 944
+0	12aa, >peptide_949... *
+1	12aa, >peptide_1102... at 91.67%
+>Cluster 945
+0	12aa, >peptide_952... *
+>Cluster 946
+0	12aa, >peptide_970... *
+>Cluster 947
+0	12aa, >peptide_972... *
+1	12aa, >peptide_1427... at 91.67%
+>Cluster 948
+0	12aa, >peptide_978... *
+>Cluster 949
+0	12aa, >peptide_994... *
+>Cluster 950
+0	12aa, >peptide_1044... *
+>Cluster 951
+0	12aa, >peptide_1070... *
+>Cluster 952
+0	12aa, >peptide_1151... *
+>Cluster 953
+0	12aa, >peptide_1212... *
+>Cluster 954
+0	12aa, >peptide_1218... *
+>Cluster 955
+0	12aa, >peptide_1221... *
+>Cluster 956
+0	12aa, >peptide_1244... *
+>Cluster 957
+0	12aa, >peptide_1249... *
+>Cluster 958
+0	12aa, >peptide_1283... *
+>Cluster 959
+0	12aa, >peptide_1300... *
+>Cluster 960
+0	12aa, >peptide_1331... *
+>Cluster 961
+0	12aa, >peptide_1381... *
+>Cluster 962
+0	12aa, >peptide_1387... *
+>Cluster 963
+0	12aa, >peptide_1392... *
+>Cluster 964
+0	12aa, >peptide_1403... *
+>Cluster 965
+0	12aa, >peptide_1418... *
+>Cluster 966
+0	12aa, >peptide_1448... *
+>Cluster 967
+0	12aa, >peptide_1453... *
+>Cluster 968
+0	12aa, >peptide_1488... *
+>Cluster 969
+0	12aa, >peptide_1507... *
+>Cluster 970
+0	12aa, >peptide_1518... *
+>Cluster 971
+0	12aa, >peptide_1574... *
+>Cluster 972
+0	12aa, >peptide_1578... *
+>Cluster 973
+0	12aa, >peptide_1595... *
+>Cluster 974
+0	12aa, >peptide_1602... *
+>Cluster 975
+0	12aa, >peptide_1666... *
+>Cluster 976
+0	12aa, >peptide_1669... *
+>Cluster 977
+0	12aa, >peptide_1685... *
+>Cluster 978
+0	11aa, >peptide_1695... at 100.00%
+1	12aa, >peptide_1717... *
+>Cluster 979
+0	12aa, >peptide_1749... *
+>Cluster 980
+0	12aa, >peptide_1754... *
+>Cluster 981
+0	12aa, >peptide_1756... *
+>Cluster 982
+0	12aa, >peptide_1760... *
+>Cluster 983
+0	12aa, >peptide_1771... *
+>Cluster 984
+0	12aa, >peptide_1799... *
+>Cluster 985
+0	12aa, >peptide_1800... *
+>Cluster 986
+0	12aa, >peptide_1866... *
+>Cluster 987
+0	12aa, >peptide_1896... *
+>Cluster 988
+0	12aa, >peptide_1925... *
+>Cluster 989
+0	12aa, >peptide_1926... *
+>Cluster 990
+0	11aa, >peptide_152... *
+>Cluster 991
+0	11aa, >peptide_350... *
+>Cluster 992
+0	11aa, >peptide_459... *
+>Cluster 993
+0	11aa, >peptide_528... *
+>Cluster 994
+0	11aa, >peptide_556... *
+1	11aa, >peptide_790... at 90.91%
+2	11aa, >peptide_1125... at 90.91%
+3	11aa, >peptide_1476... at 90.91%
+>Cluster 995
+0	11aa, >peptide_569... *
+1	11aa, >peptide_1138... at 90.91%
+>Cluster 996
+0	11aa, >peptide_572... *
+>Cluster 997
+0	11aa, >peptide_680... *
+1	11aa, >peptide_1256... at 90.91%
+>Cluster 998
+0	11aa, >peptide_746... *
+1	11aa, >peptide_891... at 90.91%
+>Cluster 999
+0	11aa, >peptide_781... *
+1	11aa, >peptide_1200... at 90.91%
+2	11aa, >peptide_1823... at 90.91%
+>Cluster 1000
+0	11aa, >peptide_1058... *
+1	11aa, >peptide_1723... at 90.91%
+>Cluster 1001
+0	11aa, >peptide_1157... *
+>Cluster 1002
+0	11aa, >peptide_1237... *
+>Cluster 1003
+0	11aa, >peptide_1428... *
+>Cluster 1004
+0	11aa, >peptide_1487... *
+>Cluster 1005
+0	11aa, >peptide_1549... *
+>Cluster 1006
+0	11aa, >peptide_1629... *
+>Cluster 1007
+0	11aa, >peptide_1632... *
+>Cluster 1008
+0	11aa, >peptide_1841... *
+>Cluster 1009
+0	11aa, >peptide_1891... *

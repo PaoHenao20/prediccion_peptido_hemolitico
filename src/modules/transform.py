@@ -21,6 +21,8 @@ import warnings
 from sklearn.feature_extraction.text import CountVectorizer
 from typing import List
 import seaborn as sns
+import json
+from scipy.stats import shapiro, levene, ttest_ind, mode
 
 
 
@@ -226,33 +228,132 @@ def compute_sequence_features(
 
     return result_df
 
-def plot_top_correlations(df, target, method, filepath):
-    if target not in df.columns:
-        print(f'🔸 La variable objetivo "{target}" no está en el DataFrame.')
-        return
-    
-    # Filtrar solo columnas numéricas
-    numeric_df = df.select_dtypes(include='number')
-    
-    # Calcular matriz de correlación
-    corr_matrix = numeric_df.corr(method=method)
-    
-    # Extraer correlación con la variable objetivo
-    correlations = corr_matrix[target].drop(target).dropna()
-    
-    # Seleccionar top 10 por valor absoluto
-    top10 = correlations.reindex(correlations.abs().sort_values(ascending=False).head(10).index)
-    
-    # Graficar
-    plt.figure(figsize=(10, 6))
-    sns.barplot(x=top10.values, y=top10.index, palette='coolwarm')
-    plt.title(f'Top 10 {method.capitalize()} correlations with {target}')
-    plt.xlabel(f'{method.capitalize()} Correlation Coefficient')
-    plt.tight_layout()
-    
-    # Guardar gráfico
-    # filename = f'{method.lower()}_top10_{target.lower()}.png'
-    # filepath = os.path.join(output_dir, filename)
-    plt.savefig(filepath)
-    plt.close()
-    print(f'✅ Gráfico guardado: {filepath}')
+def plot_top_correlations(df_filtered, method, target_variables, output_dir):
+    for target in target_variables:
+            # Selecciona solo columnas numéricas
+            numeric_df = df_filtered.select_dtypes(include=[np.number])
+            
+ 
+            corr = numeric_df.corr(method=method)[target].drop(target).sort_values(key=abs, ascending=False)
+     
+            # top 10
+            top10 = corr.head(10)
+
+            # Crear gráfico
+            plt.figure(figsize=(10, 6))
+            sns.barplot(x=top10.values, y=top10.index, palette='viridis')
+            plt.title(f'Top 10 variables más correlacionadas con {target} ({method.title()})')
+            plt.xlabel(f'Correlación {method.title()}')
+            plt.tight_layout()
+
+            # Guardar figura
+            filename = f"top10_{method}_{target}.png"
+            filepath = os.path.join(output_dir, filename)
+            plt.savefig(filepath)
+            plt.close()
+
+            print(f"✅ Saved {filepath}")
+
+
+def compute_statistical_summary_by_class(df, class_col='label', exclude_cols=None, output_dir=None, sample_size=5000):
+    if exclude_cols is None:
+        exclude_cols = []
+
+    # Asegurarse de no incluir la variable de clase ni columnas excluidas
+    numeric_cols = df.select_dtypes(include=np.number).columns
+    feature_cols = [col for col in numeric_cols if col not in exclude_cols + [class_col]]
+
+    # Separar por clase
+    classes = df[class_col].dropna().unique()
+    if len(classes) != 2:
+        raise ValueError("La función solo está preparada para clasificación binaria (2 clases).")
+
+    class_values = {c: df[df[class_col] == c] for c in classes}
+    results = []
+
+    for col in feature_cols:
+        col_stats = {"Variable": col}
+
+        # Obtener valores por clase
+        values = {c: class_values[c][col].dropna() for c in classes}
+
+        for c in classes:
+            sample = values[c].sample(min(len(values[c]), sample_size), random_state=42)
+            col_stats[f"Mean_{c}"] = values[c].mean()
+            col_stats[f"Median_{c}"] = values[c].median()
+            col_stats[f"Q1_{c}"] = values[c].quantile(0.25)
+            col_stats[f"Q3_{c}"] = values[c].quantile(0.75)
+            col_stats[f"Shapiro_p_{c}"] = shapiro(sample)[1]
+
+            moda = values[c].mode()
+            col_stats[f"Mode_{c}"] = moda.iloc[0] if not moda.empty else np.nan
+
+        # Levene test para varianzas iguales
+        col_stats["Levene_p"] = levene(values[classes[0]], values[classes[1]])[1]
+
+        results.append(col_stats)
+
+    summary_df = pd.DataFrame(results)
+    if output_dir:
+        filename = "statistical.csv"
+        filepath = os.path.join(output_dir, filename)
+        summary_df.to_csv(filepath, index=False)
+
+    return summary_df
+
+
+def t_test_between_classes(df, class_col='label', equal_var=False, exclude_cols=None):
+    if exclude_cols is None:
+        exclude_cols = []
+
+    # Filtrar columnas numéricas
+    numeric_cols = df.select_dtypes(include=np.number).columns
+    feature_cols = [col for col in numeric_cols if col not in exclude_cols + [class_col]]
+
+    # Asegurarse de que hay solo 2 clases
+    classes = df[class_col].dropna().unique()
+    if len(classes) != 2:
+        raise ValueError("Solo se admite clasificación binaria.")
+
+    # Separar por clase
+    df1 = df[df[class_col] == classes[0]]
+    df2 = df[df[class_col] == classes[1]]
+
+    results = []
+
+    for col in feature_cols:
+        x1 = df1[col].dropna()
+        x2 = df2[col].dropna()
+
+        if len(x1) < 2 or len(x2) < 2:
+            continue  # saltar si no hay suficientes datos
+
+        t_stat, p_val = ttest_ind(x1, x2, equal_var=equal_var)
+
+        results.append({
+            'Variable': col,
+            f'Mean_{classes[0]}': x1.mean(),
+            f'Mean_{classes[1]}': x2.mean(),
+            'Mean_Diff': x1.mean() - x2.mean(),
+            'p_value': p_val
+        })
+
+    return pd.DataFrame(results).sort_values('p_value')
+
+def remove_highly_correlated_features(df, method='pearson', threshold=0.75, exclude_cols=None):
+    if exclude_cols is None:
+        exclude_cols = []
+
+    numeric_df = df.select_dtypes(include=np.number).drop(columns=exclude_cols, errors='ignore')
+    corr_matrix = numeric_df.corr(method=method).abs()
+
+    # Seleccionar solo la mitad superior para evitar duplicados
+    upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
+
+    # Identificar columnas con correlación mayor al umbral
+    to_drop = [column for column in upper.columns if any(upper[column] > threshold)]
+
+    df_reduced = df.drop(columns=to_drop, errors='ignore')
+
+    print(f"🔍 Se eliminaron {len(to_drop)} variables por correlación > {threshold} usando {method}.")
+    return df_reduced, to_drop

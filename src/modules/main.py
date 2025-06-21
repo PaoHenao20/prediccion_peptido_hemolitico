@@ -14,7 +14,7 @@
 import numpy as np
 import pandas as pd
 from extract import download_file_from_url
-from transform import annotate_and_save, clean_df, compute_mordred_descriptors, concat_csv_sin_duplicados, get_smiles, df_to_fasta, run_cd_hit, fasta_to_df, compute_sequence_features, plot_top_correlations
+from transform import annotate_and_save, clean_df, compute_mordred_descriptors, concat_csv_sin_duplicados, get_smiles, df_to_fasta, run_cd_hit, fasta_to_df, compute_sequence_features, plot_top_correlations, compute_statistical_summary_by_class, t_test_between_classes, remove_highly_correlated_features
 import os
 import warnings
 import matplotlib.pyplot as plt
@@ -49,6 +49,9 @@ url_dict =  {
 
 # %%
 if __name__ == "__main__":
+    from multiprocessing import freeze_support
+    freeze_support()
+
     for file_name, url in url_dict.items():
         download_file_from_url(url, f"{MAIN_FOLDER}/{file_name}.csv")
 
@@ -94,7 +97,7 @@ if __name__ == "__main__":
             features_df = compute_sequence_features(df, seq_column='SEQUENCE')
             print(features_df.head())
             
-             # 2. Get SMILES 
+                # 2. Get SMILES 
             smiles_output = f"{CURATED_FOLDER}/{smile_folder}/peptides_{int(identity * 100)}_smiles.csv"
             df_smiles = annotate_and_save(df, output_csv=smiles_output)
 
@@ -122,88 +125,111 @@ if __name__ == "__main__":
             final_csv = f"{CURATED_FOLDER}/descriptors_and_frequencies/peptides_{int(identity * 100)}.csv"
             merge_df.to_csv(final_csv, index=False)
             print(f"✅ saved {final_csv}")
-    
-    
+
+
     df_without_cd_hit = df_limpio.merge(df_100, how='left' , on='SEQUENCE' )
+    df_without_cd_hit_mod = df_without_cd_hit.rename(columns={"μM": "HC50"})
     path = f"{CURATED_FOLDER}/descriptors_and_frequencies/peptides_without_cd_hit.csv"
-    df_without_cd_hit.to_csv(path, index=False)
+    df_without_cd_hit_mod.to_csv(path, index=False)
     print(f"✅ saved {path}")
 
-# %%
-df_without_cd_hit_mod = df_without_cd_hit.rename(columns={"μM": "HC50"})
+    # %%
+    """1. Remove low-variance and missing-value variables:
+    From the full dataset without CD-HIT filtering, drop all variables with missing values.
+    Additionally, remove variables (descriptors, dimer, and trimer frequencies) with a standard deviation less than 0.05, as they likely contain values close to zero and contribute little to model performance.
+    This filtering step is independent of class labels."""
+    # %%
+    # Quitar columnas con valores faltantes
 
-df_without_cd_hit_mod.to_csv(path, index=False)
-print(f"✅ saved {path}")
+    df_without_cd_hit_mod = df_without_cd_hit_mod.dropna(how='any')
+    df_clean = df_without_cd_hit_mod.dropna(axis=1)
 
-# %%
-"""1. Remove low-variance and missing-value variables:
-From the full dataset without CD-HIT filtering, drop all variables with missing values.
-Additionally, remove variables (descriptors, dimer, and trimer frequencies) with a standard deviation less than 0.05, as they likely contain values close to zero and contribute little to model performance.
-This filtering step is independent of class labels."""
-# %%
-# Quitar columnas con valores faltantes
+    # nan_counts = df_without_cd_hit_mod.isna().sum()
+    # nan_cols = nan_counts[nan_counts > 0]
+    # print(f"Columnas con NaNs: {len(nan_cols)}")
+    # print(nan_cols.sort_values(ascending=False).head(10)) 
 
-df_without_cd_hit_mod = df_without_cd_hit_mod.dropna(how='any')
-df_clean = df_without_cd_hit_mod.dropna(axis=1)
+    # Separar variable objetivo
+    target_cols = ['label', 'HC50']
+    features = df_clean.drop(columns=target_cols, errors='ignore')
 
-# nan_counts = df_without_cd_hit_mod.isna().sum()
-# nan_cols = nan_counts[nan_counts > 0]
-# print(f"Columnas con NaNs: {len(nan_cols)}")
-# print(nan_cols.sort_values(ascending=False).head(10)) 
+    # Filtrar solo columnas numéricas
+    numeric_features = features.select_dtypes(include=[np.number])
 
-# Separar variable objetivo
-target_cols = ['label', 'HC50']
-features = df_clean.drop(columns=target_cols, errors='ignore')
+    # Quitar columnas con desviación estándar < 0.05
+    low_var_cols = numeric_features.std()[numeric_features.std() < 0.05].index
+    features_filtered = numeric_features.drop(columns=low_var_cols)
 
-# Filtrar solo columnas numéricas
-numeric_features = features.select_dtypes(include=[np.number])
+    # Dataset final con columnas útiles + target
+    df_filtered = pd.concat([features_filtered, df_clean[target_cols]], axis=1)
 
-# Quitar columnas con desviación estándar < 0.05
-low_var_cols = numeric_features.std()[numeric_features.std() < 0.05].index
-features_filtered = numeric_features.drop(columns=low_var_cols)
+    print(df_filtered)
+    # %%
+    # Preparar los datos para visualización
+    features_only = df_filtered.drop(columns=['label', 'HC50'], errors='ignore')
+    features_only['label'] = df_filtered['label']
 
-# Dataset final con columnas útiles + target
-df_filtered = pd.concat([features_filtered, df_clean[target_cols]], axis=1)
+    # Agrupar las columnas en grupos de 50
+    cols = features_only.drop(columns='label').columns
+    group_size = 50
+    column_groups = [cols[i:i+group_size] for i in range(0, len(cols), group_size)]
 
-print(df_filtered)
-# %%
-# Preparar los datos para visualización
-features_only = df_filtered.drop(columns=['label', 'HC50'], errors='ignore')
-features_only['label'] = df_filtered['label']
-
-# Agrupar las columnas en grupos de 50
-cols = features_only.drop(columns='label').columns
-group_size = 50
-column_groups = [cols[i:i+group_size] for i in range(0, len(cols), group_size)]
-
-output_dir = os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'result', 'figures'))
-os.makedirs(output_dir, exist_ok=True)
+    output_dir = os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'TFM', 'prediccion_peptido_hemolitico', 'data', 'result', 'figures'))
+    os.makedirs(output_dir, exist_ok=True)
 
 
 
-# Crear los boxplots
-for i, group in enumerate(column_groups, start=1):
-    df_plot = pd.melt(features_only, id_vars='label', value_vars=group,
-                      var_name='feature', value_name='value')
+    # Crear los boxplots
+    for i, group in enumerate(column_groups, start=1):
+        df_plot = pd.melt(features_only, id_vars='label', value_vars=group,
+                        var_name='feature', value_name='value')
+        
+        plt.figure(figsize=(24, 10))
+        sns.boxplot(data=df_plot, x='feature', y='value', hue='label')
+        plt.title(f'Boxplots por clase – Variables {((i-1)*group_size)+1} a {((i-1)*group_size)+len(group)}')
+        plt.xticks(rotation=90)
+        plt.legend(title='Clase', labels=['No Hemolítico (0)', 'Hemolítico (1)'])
+        plt.tight_layout()
+        filepath = os.path.join(output_dir, f'boxplot_group_{i}.png')
+        plt.savefig(filepath)
+        plt.close()
+
+    # %%
+    target_variables = ['label', 'HC50']
+
+    # Crear directorio para guardar las figuras
+    output_dir = os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'TFM', 'prediccion_peptido_hemolitico', 'data', 'result', 'correlation'))
+    os.makedirs(output_dir, exist_ok=True)
+
+    for method in ['pearson', 'spearman']:
+        plot_top_correlations(df_filtered, method, target_variables, output_dir)
+
     
-    plt.figure(figsize=(24, 10))
-    sns.boxplot(data=df_plot, x='feature', y='value', hue='label')
-    plt.title(f'Boxplots por clase – Variables {((i-1)*group_size)+1} a {((i-1)*group_size)+len(group)}')
-    plt.xticks(rotation=90)
-    plt.legend(title='Clase', labels=['No Hemolítico (0)', 'Hemolítico (1)'])
-    plt.tight_layout()
-    filepath = os.path.join(output_dir, f'boxplot_group_{i}.png')
-    plt.savefig(filepath)
-    plt.close()
+    output_dir = os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'TFM', 'prediccion_peptido_hemolitico', 'data', 'result', 'statistical_summary_by_class'))
+    os.makedirs(output_dir, exist_ok=True)
 
-# %%
-target_variables = ['label', 'HC50']
+    summary = compute_statistical_summary_by_class(df_filtered, class_col='label', exclude_cols=['HC50'], output_dir=output_dir)
 
-# Crear directorio para guardar las figuras
-output_dir = os.path.abspath(os.path.join(os.getcwd(), '..', '..', 'data', 'result', 'correlation'))
-os.makedirs(output_dir, exist_ok=True)
+    # Mostrar o exportar
+    summary.head()
 
-for method in ['pearson', 'spearman']:
-    for target in target_variables:
-        plot_top_correlations(df_filtered, target, method, output_dir)
-# %%
+
+    t_test_results = t_test_between_classes(df_filtered, class_col='label', exclude_cols=['HC50'])
+
+    # Guardar o visualizar
+    t_test_results.to_csv("data/result/statistical_summary_by_class/t_test_by_class.csv", index=False)
+    t_test_results.head(10)
+
+
+    # Por ejemplo, para eliminar con Spearman y 0.8 de umbral
+    df_filtered_corr, dropped_vars = remove_highly_correlated_features(df_filtered, method='spearman', threshold=0.8, exclude_cols=['label', 'HC50'])
+    df_filtered_corr.to_csv("data/result/ remove_highly_correlated.csv", index=False)
+
+
+
+
+
+
+    # %%
+
+

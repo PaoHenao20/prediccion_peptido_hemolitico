@@ -223,7 +223,7 @@ if __name__ == "__main__":
 
     # Por ejemplo, para eliminar con Spearman y 0.8 de umbral
     df_filtered_corr, dropped_vars = remove_highly_correlated_features(df_filtered, method='spearman', threshold=0.8, exclude_cols=['label', 'HC50'])
-    df_filtered_corr.to_csv("data/result/ remove_highly_correlated.csv", index=False)
+    df_filtered_corr.to_csv("data/result/remove_highly_correlated.csv", index=False)
 
 
 

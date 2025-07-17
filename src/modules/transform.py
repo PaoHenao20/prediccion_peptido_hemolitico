@@ -83,6 +83,7 @@ def clean_df(df: pd.DataFrame, output_csv: str = None) -> pd.DataFrame:
     df_clean = df_clean[df_clean['SEQUENCE'].notna()]           # no NaN
     df_clean = df_clean[df_clean['SEQUENCE'] != '']             # no vacías
     df_clean = df_clean.reset_index(drop=True)
+    df_clean = df_clean.head(5)
 
     # 5) Guardar a CSV si se especifica
     if output_csv:

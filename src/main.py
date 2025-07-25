@@ -10,16 +10,18 @@ from data_processing.transformation import (
     load_and_concatenate_csvs,
     run_cd_hit)
 
-# url Reference" https://webs.iiitd.edu.in/raghava/hemopi/datasets.php
-# https://webs.iiitd.edu.in/raghava/hemopi2/download.html
+""" 
+url Reference" https://webs.iiitd.edu.in/raghava/hemopi/datasets.php
+https://webs.iiitd.edu.in/raghava/hemopi2/download.html
 
-#https://webs.iiitd.edu.in/raghava/hemopi2/download/cross_val_dataset.csv
-# https://webs.iiitd.edu.in/raghava/hemopi2/download/independent_dataset.csv
+HemoPI2:
+https://webs.iiitd.edu.in/raghava/hemopi2/download/cross_val_dataset.csv
+https://webs.iiitd.edu.in/raghava/hemopi2/download/independent_dataset.csv
 
-#Base de datos hemolitik, tiene API https://webs.iiitd.edu.in/raghava/hemolytik2/usr_guide.html#aboutapi    
+Base de datos hemolitik, tiene API https://webs.iiitd.edu.in/raghava/hemolytik2/usr_guide.html#aboutapi    
 
 # https://webs.iiitd.edu.in/raghava/hemopi/data/HemoPI_1_dataset/main/pos.fa
-
+"""
 
 # Global variable
 BASE_URL = "https://webs.iiitd.edu.in/raghava"

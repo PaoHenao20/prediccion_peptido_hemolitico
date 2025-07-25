@@ -43,8 +43,8 @@ CURATED_FOLDER = "data/curated"
 
 # %%
 url_dict =  {
-    "HemoPI_train": "https://webs.iiitd.edu.in/raghava/hemopi2/download/cross_val_dataset.csv",
-    "HemoPI_test": "https://webs.iiitd.edu.in/raghava/hemopi2/download/independent_dataset.csv",
+    "HemoPI2_train": "https://webs.iiitd.edu.in/raghava/hemopi2/download/cross_val_dataset.csv",
+    "HemoPI2_test": "https://webs.iiitd.edu.in/raghava/hemopi2/download/independent_dataset.csv",
     }
 
 # %%

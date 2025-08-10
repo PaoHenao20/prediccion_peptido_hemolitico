@@ -1,7 +1,46 @@
-import os
-from pathlib import Path
-import subprocess
+from matplotlib import pyplot as plt
 import pandas as pd
+import glob
+import os
+from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+import subprocess
+
+
+# PyPept imports
+from pyPept.sequence import Sequence, correct_pdb_atoms
+from pyPept.molecule import Molecule
+from collections import Counter
+from typing import Literal, Dict
+
+
+# RDKit imports
+from rdkit import Chem
+import pandas as pd
+from mordred import Calculator, descriptors
+import numpy as np
+import warnings
+from sklearn.feature_extraction.text import CountVectorizer
+from typing import List
+import seaborn as sns
+import json
+from scipy.stats import shapiro, levene, ttest_ind, mode
+
+
+if not hasattr(np, 'float'):
+    np.float = float
+if not hasattr(np, 'int'):
+    np.int = int
+if not hasattr(np, 'bool'):
+    np.bool = bool
+if not hasattr(np, 'object'):
+    np.object = object
+if not hasattr(np, 'long'):
+    np.long = int  # Python 3 ya no tiene 'long'
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 
 
 def generate_download_tasks(versions, splits, labels, raw_folder, base_url, final_path, output_name, extension):
@@ -49,7 +88,7 @@ def clean_text_and_remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
-def load_and_concatenate_csvs(folder: Path, filenames: list) -> pd.DataFrame:
+def load_and_concatenate_csvs(folder: str, filenames: list) -> pd.DataFrame:
     dataframes = []
     for name in filenames:
         file_path = folder/f"{name}.csv"
@@ -58,6 +97,12 @@ def load_and_concatenate_csvs(folder: Path, filenames: list) -> pd.DataFrame:
         dataframes.append(df)
     return pd.concat(dataframes, ignore_index=True)
 
+def df_to_fasta(df, seq_col='sequence', output='peptides.fasta'):
+    records = [
+        SeqRecord(Seq(seq), id=f"peptide_{i+1}", description="")
+        for i, seq in enumerate(df[seq_col])
+    ]
+    SeqIO.write(records, output, "fasta")
 
 def run_cd_hit(input_fasta, output_prefix, identity):
     output_file = f"{output_prefix}_{int(identity * 100)}.fasta"
@@ -73,3 +118,137 @@ def run_cd_hit(input_fasta, output_prefix, identity):
         print(f"CD-HIT completado para identidad {identity*100:.0f}%. Resultado: {output_file}")
     except subprocess.CalledProcessError as e:
         print(f"Error ejecutando CD-HIT con identidad {identity}: {e}")
+
+
+def fasta_to_df(fasta_path: str, output_csv: str = None) -> pd.DataFrame:
+    """Carga un archivo FASTA como DataFrame con una columna SEQUENCE"""
+    from Bio import SeqIO
+    sequences = []
+    for record in SeqIO.parse(fasta_path, "fasta"):
+        sequences.append(str(record.seq))
+    
+    df_result = pd.DataFrame({"SEQUENCE": sequences})
+
+    if output_csv:
+        df_result.to_csv(output_csv, index=False)
+    return df_result
+
+
+# def normalize_counts(X):
+#     """Normaliza las filas de una matriz para obtener frecuencias relativas."""
+#     row_sums = X.sum(axis=1)
+#     X_normalized = X.astype(float)
+#     for i in range(X.shape[0]):
+#         if row_sums[i, 0] != 0:
+#             X_normalized[i] /= row_sums[i, 0]
+#     return X_normalized
+
+
+# def calc_aa_frequencies(
+#     df: pd.DataFrame,
+#     seq_column: str = 'sequence',
+#     ks: List[int] = [1, 2, 3]
+# ) -> pd.DataFrame:
+#     """
+#     Calcula frecuencias de aminoácidos, dipeptidos y tripeptidos para cada secuencia.
+#     Retorna un DataFrame con una fila por secuencia y columnas por k-mer.
+#     """
+#     result_df = df[[seq_column]].copy()
+
+#     for k in ks:
+#         vectorizer = CountVectorizer(analyzer='char', ngram_range=(k, k))
+#         sequences = df[seq_column].astype(str).str.upper().fillna("")
+#         X_counts = vectorizer.fit_transform(sequences)
+#         X_freqs = normalize_counts(X_counts)
+        
+#         # Generar nombres de columnas
+#         kmer_cols = [f'{k}mer_{kmer}' for kmer in vectorizer.get_feature_names_out()]
+#         kmer_df = pd.DataFrame(X_freqs.toarray(), columns=kmer_cols)
+#         result_df = pd.concat([result_df.reset_index(drop=True), kmer_df], axis=1)
+
+#     return result_df
+
+
+VALID_AA = set("ACDEFGHIKLMNPQRSTVWY")
+
+def calc_kmer_frequencies(seq: str, k: int, relative: bool = True) -> Dict[str, float]:
+    """Calculate sequence kmer frequencies"""
+    seq = seq.upper().replace(" ", "")
+    if not set(seq).issubset(VALID_AA):
+        raise ValueError(f"Invalid amino acids in: {seq}")
+    
+    kmers = [seq[i:i+k] for i in range(len(seq) - k + 1)]
+    counts = Counter(kmers)
+    
+    if relative:
+        total = sum(counts.values())
+        return {kmer: count / total for kmer, count in counts.items()}
+    return dict(counts)
+
+
+def split_with_hyphens(cadena: str) -> str:
+    if pd.notnull(cadena):
+        return '-'.join(cadena)
+    return cadena
+
+def get_smiles(peptido: str) -> str:
+    # 1) formatear la cadena
+    seq_str = split_with_hyphens(peptido)
+    print(seq_str)
+
+    # 2) crear objeto Sequence y corregir átomos
+    seq_obj = Sequence(seq_str)
+    seq_obj = correct_pdb_atoms(seq_obj)
+
+    # 3) generar molécula y convertir a ROMol
+    mol_obj = Molecule(seq_obj)
+    romol = mol_obj.get_molecule(fmt='ROMol')
+
+    # 4) obtener SMILES
+    smiles = Chem.MolToSmiles(romol)
+
+    return smiles
+
+
+def annotate_and_save(
+    df: pd.DataFrame,
+    seq_col: str = 'SEQUENCE',
+    smiles_col: str = 'SMILES',
+    output_csv: str = None
+) -> pd.DataFrame:
+    # 1) Guarda la lista de columnas originales
+    original_cols = list(df.columns)
+    # 2) Haz una copia para no mutar el DataFrame pasado
+    df_out = df.copy()
+    # 3) Añade la columna de SMILES
+    df_out[smiles_col] = df_out[seq_col].apply(get_smiles)
+    # 4) Reordena para que queden primero las originales y luego SMILES
+    df_out = df_out[original_cols + [smiles_col]]
+    # 5) Guarda si pidieron ruta
+    if output_csv:
+        df_out.to_csv(output_csv, index=False)
+    return df_out
+
+def compute_mordred_descriptors(df: pd.DataFrame,
+                                smiles_col: str = 'SMILES') -> pd.DataFrame:
+    """
+    Para cada SMILES en df[smiles_col], calcula todos los descriptores de Mordred
+    (ignore_3D=True) y devuelve un nuevo DataFrame con los descriptores.
+    """
+    # 1) Instanciar el calculador de Mordred
+    calc = Calculator(descriptors, ignore_3D=True)
+
+    # 2) Convertir cada SMILES a Mol
+    mols = df[smiles_col].map(lambda s: Chem.MolFromSmiles(s))
+
+    # 3) Ejecutar Mordred en lote y obtener DataFrame de descriptores
+    #    calc.pandas acepta una lista/serie de RDKit Mol
+    df_desc = calc.pandas(mols)
+
+    # 4) Opcional: limpiar columnas con todos NaN o infinito
+    df_desc = df_desc.dropna(axis=1, how='all')
+
+    # 5) Resetear índices para alineación
+    df_desc.index = df.index
+
+    return df_desc

@@ -1,4 +1,4 @@
-# Nombre del entorno
+# Env name
 ENV_NAME=prediccion_hemolitico
 CONDA_ACTIVATE = source $(HOME)/miniconda3/etc/profile.d/conda.sh && conda activate $(ENV_NAME)
 

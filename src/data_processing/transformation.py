@@ -13,11 +13,7 @@ from pyPept.sequence import Sequence, correct_pdb_atoms
 from pyPept.molecule import Molecule
 from collections import Counter
 from typing import Literal, Dict
-
-
-# RDKit imports
 from rdkit import Chem
-import pandas as pd
 from mordred import Calculator, descriptors
 import numpy as np
 import warnings

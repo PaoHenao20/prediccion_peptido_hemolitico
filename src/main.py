@@ -36,75 +36,75 @@ CURATED_FOLDER = "data/curated"
 
 
 def main():
-    # # Downloading HemoPI data: 
-    # # ---------------------------------------------------------------------
-    # # 1️⃣ HemoPI – download FASTA files (pos/neg for each dataset & split)
-    # # ---------------------------------------------------------------------
+    # Downloading HemoPI data: 
+    # ---------------------------------------------------------------------
+    # 1️⃣ HemoPI – download FASTA files (pos/neg for each dataset & split)
+    # ---------------------------------------------------------------------
 
-    # versions_hemopi = ["HemoPI_1_dataset", "HemoPI_2_dataset", "HemoPI_3_dataset"]
-    # type_hemopi = ["main", "validation"]
-    # labels_hemopi = {
-    #     "positive": "pos",
-    #     "negative": "neg"
-    # }
-    # output_hemopi = "HemoPI"
-    # hemopi_path =  "hemopi/data"
-
-
-    # tasks_hemopi =  generate_download_tasks(versions_hemopi, type_hemopi, labels_hemopi, RAW_FOLDER, BASE_URL, hemopi_path, output_hemopi, "fa")
-    # for url, output_path in tasks_hemopi:
-    #     print(f"📥 Downloading from: {url}")
-    #     print(f"📁 Saving to: {output_path}")
-    #     download_file_from_url(url, output_path)
-
-    # # ---------------------------------------------------------------------
-    # # 2️⃣ HemoPI2 – download two CSVs (cross‑val & independent)
-    # # ---------------------------------------------------------------------
-    # hemopi2_path = "hemopi2/download"
-    # versions_hemopi2 = ["cross_val_dataset", "independent_dataset"]
-    # output_hemopi2 = "HemoPI2"
-
-    # tasks_hemopi2 =  generate_download_tasks(versions_hemopi2, None, None, RAW_FOLDER, BASE_URL, hemopi2_path, output_hemopi2, "csv")
-    # for url, output_path in tasks_hemopi2:
-    #     print(f"📥 Downloading from: {url}")
-    #     print(f"📁 Saving to: {output_path}")
-    #     download_file_from_url(url, output_path)
+    versions_hemopi = ["HemoPI_1_dataset", "HemoPI_2_dataset", "HemoPI_3_dataset"]
+    type_hemopi = ["main", "validation"]
+    labels_hemopi = {
+        "positive": "pos",
+        "negative": "neg"
+    }
+    output_hemopi = "HemoPI"
+    hemopi_path =  "hemopi/data"
 
 
-    # # ---------------------------------------------------------------------
-    # # 3️⃣ Merge, clean, and save HemoPI2 data
-    # # ---------------------------------------------------------------------
+    tasks_hemopi =  generate_download_tasks(versions_hemopi, type_hemopi, labels_hemopi, RAW_FOLDER, BASE_URL, hemopi_path, output_hemopi, "fa")
+    for url, output_path in tasks_hemopi:
+        print(f"📥 Downloading from: {url}")
+        print(f"📁 Saving to: {output_path}")
+        download_file_from_url(url, output_path)
 
-    # hemopi2_folder = Path(RAW_FOLDER)/output_hemopi2
-    # output_file = Path(PROCESSED_FOLDER)/output_hemopi2/"hemopi2_clean.csv"
+    # ---------------------------------------------------------------------
+    # 2️⃣ HemoPI2 – download two CSVs (cross‑val & independent)
+    # ---------------------------------------------------------------------
+    hemopi2_path = "hemopi2/download"
+    versions_hemopi2 = ["cross_val_dataset", "independent_dataset"]
+    output_hemopi2 = "HemoPI2"
+
+    tasks_hemopi2 =  generate_download_tasks(versions_hemopi2, None, None, RAW_FOLDER, BASE_URL, hemopi2_path, output_hemopi2, "csv")
+    for url, output_path in tasks_hemopi2:
+        print(f"📥 Downloading from: {url}")
+        print(f"📁 Saving to: {output_path}")
+        download_file_from_url(url, output_path)
+
+
+    # ---------------------------------------------------------------------
+    # 3️⃣ Merge, clean, and save HemoPI2 data
+    # ---------------------------------------------------------------------
+
+    hemopi2_folder = Path(RAW_FOLDER)/output_hemopi2
+    output_file = Path(PROCESSED_FOLDER)/output_hemopi2/"hemopi2_clean.csv"
     
-    # # Load and merge data
-    # hemopi_2_all_df = load_and_concatenate_csvs(hemopi2_folder, versions_hemopi2)
-    # print(hemopi_2_all_df.info())
+    # Load and merge data
+    hemopi_2_all_df = load_and_concatenate_csvs(hemopi2_folder, versions_hemopi2)
+    print(hemopi_2_all_df.info())
     
-    # # Clean data
-    # hemopi_2_all_df_clean = clean_text_and_remove_duplicates(hemopi_2_all_df)
-    # print(hemopi_2_all_df_clean.info())
+    # Clean data
+    hemopi_2_all_df_clean = clean_text_and_remove_duplicates(hemopi_2_all_df)
+    print(hemopi_2_all_df_clean.info())
     
-    # # Save clean data
-    # output_file.parent.mkdir(parents=True, exist_ok=True)
-    # hemopi_2_all_df_clean.to_csv(output_file, index=False)
-    # print(f"Cleaned data saved to {output_file}")
+    # Save clean data
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    hemopi_2_all_df_clean.to_csv(output_file, index=False)
+    print(f"Cleaned data saved to {output_file}")
 
 
-    # hemopi_2_all_df_clean = hemopi_2_all_df_clean.head(100)
+    hemopi_2_all_df_clean = hemopi_2_all_df_clean
 
-    # # ---------------------------------------------------------------------
-    # # 4. Convert data in fasta
-    # # ---------------------------------------------------------------------
+    # ---------------------------------------------------------------------
+    # 4. Convert data in fasta
+    # ---------------------------------------------------------------------
 
     fasta_file_name = "peptides.fasta"
     fasta_path = f'{CURATED_FOLDER}/{fasta_file_name}'
-    # df_to_fasta(hemopi_2_all_df_clean, seq_col='SEQUENCE', output=fasta_path)
+    df_to_fasta(hemopi_2_all_df_clean, seq_col='SEQUENCE', output=fasta_path)
 
-    # # ---------------------------------------------------------------------
-    # # 5. Apply redundancy filtering using CD-HIT
-    # # ---------------------------------------------------------------------
+    # ---------------------------------------------------------------------
+    # 5. Apply redundancy filtering using CD-HIT
+    # ---------------------------------------------------------------------
     
     cd_hit_prefix = f"{CURATED_FOLDER}/cd_hit/peptides_nr"
     identities = [1.00, 0.95, 0.90, 0.85, 0.80, 0.75, 0.70]
@@ -137,8 +137,8 @@ def main():
                 # 5.1. Get SMILES 
             smile_folder = "smile_data"
             smiles_output = f"{CURATED_FOLDER}/{smile_folder}/peptides_{int(identity * 100)}_smiles.csv"
-            # df_smiles = annotate_and_save(data_identity, output_csv=smiles_output)
-            # print(df_smiles)
+            df_smiles = annotate_and_save(data_identity, output_csv=smiles_output)
+            print(df_smiles)
 
             df_smiles = pd.read_csv(smiles_output, delimiter=',')
 
@@ -176,15 +176,6 @@ def main():
             final_csv = f"{CURATED_FOLDER}/descriptors_and_frequencies/peptides_{int(identity * 100)}.csv"
             merge_df.to_csv(final_csv, index=False)
             print(f"✅ saved {final_csv}")
-
-
-
-    # df_without_cd_hit = df_limpio.merge(df_100, how='left' , on='SEQUENCE' )
-    # df_without_cd_hit_mod = df_without_cd_hit.rename(columns={"μM": "HC50"})
-    # path = f"{CURATED_FOLDER}/descriptors_and_frequencies/peptides_without_cd_hit.csv"
-    # df_without_cd_hit_mod.to_csv(path, index=False)
-    # print(f"✅ saved {path}")
-
 
 
 

@@ -24,16 +24,18 @@ import json
 from scipy.stats import shapiro, levene, ttest_ind, mode
 
 
+import numpy as np
+
+# Compatibilidad con versiones nuevas de NumPy
+if not hasattr(np, 'bool'):
+    np.bool = np.bool_   # alias a la versión nueva
+if not hasattr(np, 'object'):
+    np.object = np.object_   # alias correcto
+if not hasattr(np, 'long'):
+    np.long = np.int_   # 'long' era un alias de int en NumPy
 if not hasattr(np, 'float'):
     np.float = float
-if not hasattr(np, 'int'):
-    np.int = int
-if not hasattr(np, 'bool'):
-    np.bool = bool
-if not hasattr(np, 'object'):
-    np.object = object
-if not hasattr(np, 'long'):
-    np.long = int  # Python 3 ya no tiene 'long'
+
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -128,42 +130,6 @@ def fasta_to_df(fasta_path: str, output_csv: str = None) -> pd.DataFrame:
     if output_csv:
         df_result.to_csv(output_csv, index=False)
     return df_result
-
-
-# def normalize_counts(X):
-#     """Normaliza las filas de una matriz para obtener frecuencias relativas."""
-#     row_sums = X.sum(axis=1)
-#     X_normalized = X.astype(float)
-#     for i in range(X.shape[0]):
-#         if row_sums[i, 0] != 0:
-#             X_normalized[i] /= row_sums[i, 0]
-#     return X_normalized
-
-
-# def calc_aa_frequencies(
-#     df: pd.DataFrame,
-#     seq_column: str = 'sequence',
-#     ks: List[int] = [1, 2, 3]
-# ) -> pd.DataFrame:
-#     """
-#     Calcula frecuencias de aminoácidos, dipeptidos y tripeptidos para cada secuencia.
-#     Retorna un DataFrame con una fila por secuencia y columnas por k-mer.
-#     """
-#     result_df = df[[seq_column]].copy()
-
-#     for k in ks:
-#         vectorizer = CountVectorizer(analyzer='char', ngram_range=(k, k))
-#         sequences = df[seq_column].astype(str).str.upper().fillna("")
-#         X_counts = vectorizer.fit_transform(sequences)
-#         X_freqs = normalize_counts(X_counts)
-        
-#         # Generar nombres de columnas
-#         kmer_cols = [f'{k}mer_{kmer}' for kmer in vectorizer.get_feature_names_out()]
-#         kmer_df = pd.DataFrame(X_freqs.toarray(), columns=kmer_cols)
-#         result_df = pd.concat([result_df.reset_index(drop=True), kmer_df], axis=1)
-
-#     return result_df
-
 
 VALID_AA = set("ACDEFGHIKLMNPQRSTVWY")
 
